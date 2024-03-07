@@ -136,5 +136,15 @@ Le charset utilisé par défaut contient toutes les lettres en majuscule et en m
 
 On l'appelle aussi "mixalpha-numeric".
 
+### Manipulation 4.3
+
+``` bash
+hashcat -m 1000 -a 3 -o Documents/output.txt  Documents/XPHash.txt --force
+```
+
+Contenu du fichier output.txt :
+```               
+04b365a8953171d1e9decf74feb7ecac:nceipo
+```
 
 
