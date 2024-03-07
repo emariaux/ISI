@@ -35,3 +35,51 @@ Il y a 62 possibilités.
 
 ### Question 2.13 - Entre 0 et 8 caractères ASCII ?
 
+
+## 3 Identification des empreintes des mots de passe
+
+### Question 3.1
+#### Fichier KaliHash.txt
+```
+eve:$1$4sj69SxM$5Hh9C.gRF7UT17Wz3HIqF/:17053:0:99999:7:::
+mallory:$1$ymwtXJQY$e8tMKmtotzkYLFqKgP/6q0:17053:0:99999:7:::
+alice:$1$iQlQrcnz$qmUTfRdy7A.aEWFbxaCks1:17053:0:99999:7:::
+bob:$1$0N.qY.ZR$3C.cM68sYQMpvRqrli2R60:17053:0:99999:7:::
+dave:$1$a.YWY6/x$wm/D7ev3eS5jC3VbRYjg5.:17053:0:99999:7:::
+carol:$1$5kT6bbgA$k7yAdihlsyqwwqIr3ffsG/:17053:0:99999:7:::
+oscar:$1$HoxVfeez$iyJuR/nnBvUxs8TgvdDhU/:17053:0:99999:7:::
+trudy:$1$HeZRtVDU$sXnJlrlXkp5WijAJ4bswg.:17053:0:99999:7:::
+```
+C'est tous des du MD5 car le hash début par $1$ qui correspond à l'identifiant du MD5 pour le hash dans Linux
+
+
+##### Fichier XPHash.txt
+```
+Eve:1001:c31a24469a55166faad3b435b51404ee:04b365a8953171d1e9decf74feb7ecac:::
+Mallory:1002:99194A696E6DEDE07EB75CA3794CB4A9:78817779602482E0219A0C97D71DDE90:::
+Alice:1003:4738b39ea1ebbf44aad3b435b51404ee:82cf6feab03795ff1e1b7e3b43e9764e:::
+Bob:1004:3D8C2EB1357B87C425AD3B83FA6627C7:A3A776245051E861E35D0A172FE0BC34:::
+Dave:1005:C1665B7DB2F988E8F8690B0965ADA5B0:B295D7DD10B0AFE1B6BBCE24B74B8663:::
+Carol:1006:ADBF7A1FB75875C8AAD3B435B51404EE:F57300698A5B0B55234837D920EAA3EE:::
+Oscar:1007:36AB09A9560E3372AAD3B435B51404EE:46599A6541E638A90AFBA723AD58DF81:::
+Trudy:1008:7110B4ED1C72AA241AA818381E4E281B:2D909D6BD6282076B6F0B5ABBC40BB96:::
+```
+C'est du  NTLM car sur Windows XP c'est NT LAN Manager Hash qui est utilisé et ce dernier se base sur le MD4.
+
+## 4 Hashcat
+
+### Manipulation 4.1
+``` bash
+sudo gzip -d /usr/share/wordlists/rockyou.txt.gz
+sudo cp /usr/share/wordlists/rockyou.txt Documents/rockyou.txt
+``` 
+
+### Question 4.1
+(https://hashcat.net/wiki/doku.php?id=example_hashes)
+NTLM = 1000 pour XP Hasch
+hashcat -m 1000 -a 0 -o Documents/output.txt Documents/XPHash.txt Documents/rockyou.txt
+
+MD5 = 500 pour KaliHash
+500 c'est le code pour le MD5 de UNIX
+
+
