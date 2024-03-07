@@ -50,7 +50,7 @@ carol:$1$5kT6bbgA$k7yAdihlsyqwwqIr3ffsG/:17053:0:99999:7:::
 oscar:$1$HoxVfeez$iyJuR/nnBvUxs8TgvdDhU/:17053:0:99999:7:::
 trudy:$1$HeZRtVDU$sXnJlrlXkp5WijAJ4bswg.:17053:0:99999:7:::
 ```
-C'est tous des du MD5 car le hash début par $1$ qui correspond à l'identifiant du MD5 pour le hash dans Linux
+C'est tous du MD5 car le hash début par '$1'$ qui correspond à l'identifiant du MD5 pour le hash dans Linux
 
 
 ##### Fichier XPHash.txt
@@ -73,13 +73,29 @@ C'est du  NTLM car sur Windows XP c'est NT LAN Manager Hash qui est utilisé et 
 sudo gzip -d /usr/share/wordlists/rockyou.txt.gz
 sudo cp /usr/share/wordlists/rockyou.txt Documents/rockyou.txt
 ``` 
+hashcat -m 1000 -a 0 -o Documents/output.txt Documents/XPHash.txt Documents/rockyou.txt
 
 ### Question 4.1
 (https://hashcat.net/wiki/doku.php?id=example_hashes)
 NTLM = 1000 pour XP Hasch
-hashcat -m 1000 -a 0 -o Documents/output.txt Documents/XPHash.txt Documents/rockyou.txt
+Pour l'option -m nous avons des codes qui représentent chaque type de hachage.
+Pour le NTLM c'est 1000.
+Concernant le MD5 il y en a plusieurs.
+Dans notre cas, nous avons le MD5 unix qui a le code 500
 
-MD5 = 500 pour KaliHash
-500 c'est le code pour le MD5 de UNIX
+### Question 4.2
+
+C'est l'option a qui définit le type d'attaque que ne souhaitons réalisé.
+Voici les différentes solutions.
+0 : Attaque par dictionnaire. Utilise une liste de mots (un dictionnaire) comme mots de passe potentiels.
+1 : Attaque combinée. Combine des mots de deux listes de mots différentes de manière à créer de nouveaux mots de passe potentiels.
+3 : Attaque par force brute. Génère toutes les combinaisons possibles de caractères jusqu'à ce que le mot de passe soit trouvé.
+6 : Attaque hybride Dictionnaire + Masque. Commence par un mot du dictionnaire et ajoute des combinaisons de caractères à la fin.
+7 : Attaque hybride Masque + Dictionnaire. Commence par des combinaisons de caractères et ajoute un mot du dictionnaire à la fin.
+
+### Question 4.3
+Le mode d'attaque par défaut est l'attaque dictionnaire.
+
+### Manipulation 4.2
 
 
