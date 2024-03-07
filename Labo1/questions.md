@@ -87,10 +87,15 @@ Dans notre cas, nous avons le MD5 unix qui a le code 500
 
 C'est l'option a qui définit le type d'attaque que ne souhaitons réalisé.
 Voici les différentes solutions.
+
 0 : Attaque par dictionnaire. Utilise une liste de mots (un dictionnaire) comme mots de passe potentiels.
+
 1 : Attaque combinée. Combine des mots de deux listes de mots différentes de manière à créer de nouveaux mots de passe potentiels.
+
 3 : Attaque par force brute. Génère toutes les combinaisons possibles de caractères jusqu'à ce que le mot de passe soit trouvé.
+
 6 : Attaque hybride Dictionnaire + Masque. Commence par un mot du dictionnaire et ajoute des combinaisons de caractères à la fin.
+
 7 : Attaque hybride Masque + Dictionnaire. Commence par des combinaisons de caractères et ajoute un mot du dictionnaire à la fin.
 
 ### Question 4.3
