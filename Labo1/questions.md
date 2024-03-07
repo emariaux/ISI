@@ -117,3 +117,10 @@ Contenu du fichier output.txt :
 #### KALIHash
 
 
+### Question 4.4
+Un masque permet de réduire le nombre de possibilité à tester.
+Par exemple nous pouvons dire que le premier du caractère sera une majuscule car cela est plus fréquent.
+Nous évitons donc de tester 62 possibilités au première emplacement. Nous avons plus que 26 à faire.
+
+
+
