@@ -50,7 +50,7 @@ carol:$1$5kT6bbgA$k7yAdihlsyqwwqIr3ffsG/:17053:0:99999:7:::
 oscar:$1$HoxVfeez$iyJuR/nnBvUxs8TgvdDhU/:17053:0:99999:7:::
 trudy:$1$HeZRtVDU$sXnJlrlXkp5WijAJ4bswg.:17053:0:99999:7:::
 ```
-C'est tous du MD5 car le hash début par $1$ qui correspond à l'identifiant du MD5 pour le hash dans Linux
+C'est tous du MD5 car le hash début par \$1\$ qui correspond à l'identifiant du MD5 pour le hash dans Linux
 
 
 ##### Fichier XPHash.txt
