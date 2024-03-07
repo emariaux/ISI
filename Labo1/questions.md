@@ -106,7 +106,7 @@ On peut voir qu'on n'a pas obtenu tous les mot de passes, cela est dû au faite 
 
 #### XPHash
 ``` bash
-hashcat -m 1000 -a 0 -o Documents/output.txt shares/ISI/labo/Labo1/ISI23_labo1_craquage_files/XPHash.txt /usr/share/wordlists/rockyou.txt --force
+hashcat -m 1000 -o Documents/output.txt shares/ISI/labo/Labo1/ISI23_labo1_craquage_files/XPHash.txt /usr/share/wordlists/rockyou.txt --force
 ```
 
 Contenu du fichier output.txt :
@@ -115,12 +115,19 @@ Contenu du fichier output.txt :
 ```
 
 #### KALIHash
+``` bash
+hashcat -m 1000 -o Documents/output.txt shares/ISI/labo/Labo1/ISI23_labo1_craquage_files/KALIHash.txt /usr/share/wordlists/rockyou.txt --force
+```
 
+Contenu du fichier output.txt :
+```               
+$1$iQlQrcnz$qmUTfRdy7A.aEWFbxaCks1:funtime
+```
 
 ### Question 4.4
 Un masque permet de réduire le nombre de possibilité à tester.
 Par exemple nous pouvons dire que le premier du caractère sera une majuscule car cela est plus fréquent.
-Nous évitons donc de tester 62 possibilités au première emplacement. Nous avons plus que 26 à faire.
+Nous évitons donc de tester 62 possibilités au première emplacement. Nous en avons plus que 26 à faire.
 
 
 
