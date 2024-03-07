@@ -77,7 +77,7 @@ hashcat -m 1000 -a 0 -o Documents/output.txt Documents/XPHash.txt Documents/rock
 
 ### Question 4.1
 (https://hashcat.net/wiki/doku.php?id=example_hashes)
-NTLM = 1000 pour XP Hasch
+NTLM = 1000 pour XP Hash
 Pour l'option -m nous avons des codes qui représentent chaque type de hachage.
 Pour le NTLM c'est 1000.
 Concernant le MD5 il y en a plusieurs.
@@ -99,7 +99,7 @@ Voici les différentes solutions.
 7 : Attaque hybride Masque + Dictionnaire. Commence par des combinaisons de caractères et ajoute un mot du dictionnaire à la fin.
 
 ### Question 4.3
-Le mode d'attaque par défaut est l'attaque dictionnaire.
+Le mode d'attaque par défaut est l'attaque dictionnaire donc le code 0.
 
 ### Manipulation 4.2
 
