@@ -102,5 +102,18 @@ Voici les différentes solutions.
 Le mode d'attaque par défaut est l'attaque dictionnaire donc le code 0.
 
 ### Manipulation 4.2
+On peut voir qu'on n'a pas obtenu tous les mot de passes, cela est dû au faite qu'ils n'ont pas été trouvés dans le dictionnaire.
+
+#### XPHash
+``` bash
+hashcat -m 1000 -a 0 -o Documents/output.txt shares/ISI/labo/Labo1/ISI23_labo1_craquage_files/XPHash.txt /usr/share/wordlists/rockyou.txt --force
+```
+
+Contenu du fichier output.txt :
+```               
+82cf6feab03795ff1e1b7e3b43e9764e:funtime
+```
+
+#### KALIHash
 
 
