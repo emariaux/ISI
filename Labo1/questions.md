@@ -132,9 +132,25 @@ Nous évitons donc de tester 62 possibilités au première emplacement. Nous en 
 Ils sont utiles dans les modes 3, 6 et 7 de hashcat. Ces derniers essayent des combinaisons de caractères.
 
 ### Question 4.5
-Le charset utilisé par défaut contient toutes les lettres en majuscule et en minuscule ainsi que tous les nombres. 
+Ci-dessous, la liste des charsets prédéfinis :
+- ?l = abcdefghijklmnopqrstuvwxyz
+- ?u = ABCDEFGHIJKLMNOPQRSTUVWXYZ
+- ?d = 0123456789
+- ?h = 0123456789abcdef
+- ?H = 0123456789ABCDEF
+- ?s = «space»!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+- ?a = ?l?u?d?s
+- ?b = 0x00 - 0xff
 
-On l'appelle aussi "mixalpha-numeric".
+### Question 4.6
+Par défaut, le bruteforce utilise 3 types de charsets :
+1 - ?l?d?u (lowercase, digits, and uppercase)
+2 - ?l?d (lowercase and digits)
+3 - ?l?d*!$@_ (lowercase, digits, and five selected special characters)
+?1?2?2?2?2?2?2?3?3?3?3?d?d?d?d
+
+En combinaison à cela, il utilise ce masque :
+?1?2?2?2?2?2?2?3?3?3?3?d?d?d?d
 
 ### Manipulation 4.3
 
