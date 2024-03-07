@@ -131,4 +131,10 @@ Nous évitons donc de tester 62 possibilités au première emplacement. Nous en 
 
 Ils sont utiles dans les modes 3, 6 et 7 de hashcat. Ces derniers essayent des combinaisons de caractères.
 
+### Question 4.5
+Le charset utilisé par défaut contient toutes les lettres en majuscule et en minuscule ainsi que tous les nombres. 
+
+On l'appelle aussi "mixalpha-numeric".
+
+
 
