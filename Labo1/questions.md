@@ -129,5 +129,6 @@ Un masque permet de réduire le nombre de possibilité à tester.
 Par exemple nous pouvons dire que le premier du caractère sera une majuscule car cela est plus fréquent.
 Nous évitons donc de tester 62 possibilités au première emplacement. Nous en avons plus que 26 à faire.
 
+Ils sont utiles dans les modes 3, 6 et 7 de hashcat. Ces derniers essayent des combinaisons de caractères.
 
 
