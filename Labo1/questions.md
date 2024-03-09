@@ -163,4 +163,32 @@ Contenu du fichier output.txt :
 04b365a8953171d1e9decf74feb7ecac:nceipo
 ```
 
+### Question 4.7
+Afin de tester plusieurs longueur pendnant le brutefoce nous avons plusieurs possiblitiés.
+En faisait de l'incrémentation. Tester tous les mots de passes selon un masque entre 5 et 7 caractères.
+```bash
+hashcat -m 1000 -a 3 -o Documents/output.txt  Documents/XPHash.txt ?a?a?a?a?a --increment --increment-min 5 --increment-max 7  --force
+```
+
+### Question 4.8
+Nous pouvons définir un nouveau alphabet donc un ensemble de caractères pesonalisé.
+Pour cela, nous pouvons rajouter les options -1,-2,-3 chacun correspoond à un nouvel alphabet.
+Par exemple si on veut dans notre alphabet abcdef1234 on effectuer la commande suivante.
+```bash
+hashcat -m 1000 -a 3 -o Documents/output.txt  Documents/XPHash.txt -1 abcdef1234 ?1?1?1
+
+```
+
+### Manipulation 4.4
+``` bash
+hashcat -m 1000 -a 3 -o Documents/output.txt Documents/XPHash.txt -1 ?l?u ?1?1?1?1 --increment --increment-min 4 --increment-max 7 --force
+```
+Aucun résultat de trouvé
+
+### Manipulation 4.5
+
+```bash
+hashcat -m 1000 -a 3 -o Documents/output.txt  Documents/XPHash.txt ?s?a --increment --increment-max 6 --force
+```
+
 
