@@ -199,14 +199,43 @@ TODO
 
 ### Manipulation 4.7
 ```bash
-
+hashcat -m 1000 -a 6  -o Documents/output.txt Documents/XPHash.txt Documents/rockyou.txt  ?a?a
 ```
+#### output.txt
+```
+78817779602482e0219a0c97d71dde90:juliette173
+```
+
+```bash
+hashcat -m 1000 -a 7  -o Documents/output.txt Documents/XPHash.txt ?a  Documents/rockyou.txt
+```
+Aucun résultat
 
 ### Question 4.9
 Les "rules" sont utilisées pour modifier les entrées de mot de passe lors d'une attaque par dictionnaire. Cela permet de tester plus de mot de passe. En mettant une majuscule au début des chiffres à la fin. Remplacement d'un "e" par "3".
-C'est utilisé avec les modes 0 et 1.
+C'est utilisé avec les modes 0 et 1. Les règles sont spécifiées dans un fichier de règles.
 
 ### Question 4.10
-
+Il en exite plusieurs.
+Letspeak.rule qui remplace les e par un 3 les a par 4 etc...
+best64.rule un ensemble de règle pour un large choix de mot de passe.
+dive.rule fichier pour des attaques en profondeur
+generated.rule règle généré automatiquement avec un beaucoup de transformation.
 
 ### Question 4.11
+letspeak.rule transfrorme les mots avec des substitutions les e remplacé par 3, a par 4 
+
+
+
+## Résultat :
+### Question 6.1
+|            | Mot de passe  | Outil   | Méthode |
+|------------|---------------|---------|---------|
+|Eve         | nceipo        | hashcat | -a 3 bruteforce |
+|Mallory     | juliette173   | hashcat | -a 6 dictionnaire + mask|
+|Alice       | funtime       | hascat  | -a default dictionnaire|
+|Bob         | | | |
+|Dave        | | | |
+|Carol       | | | |
+|Oscar       | | | |
+|Trudy       | | | |
