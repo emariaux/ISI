@@ -42,20 +42,27 @@ Il faut la moitié donc 0.5 jours = 12 heures
 ### Question 2.15 Toujours avec la même base, combien de temps faudra-t-il « au maximum » pour casser un mot de passe de la question 2.12 ?
 282.11 * 10^10 = 1 jour
 128^8 = 25542.37 jour
+
 ### Question 2.16 Combien de temps faudra-t-il « en moyenne » pour casser un mot de passe de la question 2.12 ?
 25542.37 jour / 2 = 12771.19 jours
 
-
 ### Question 2.17 En considérant des attaques « hors ligne », décrire trois manières de freiner (soit bloquer, soit ralentir) l’attaquant ?
-
+1. Renforcement des fonctions de hachages, cela rends le calcul plus lent, donc pas pratique pour l'attaquant.
+2. Limitation des tentatives de connexion, par exemple vérouiller le compte après un certain nombre de tentatives.
+3. Surveillance des logs de connexions afin de détecter des activités suspectes.
 
 ### Question 2.18 En considérant des attaques « en ligne », décrire deux manières de freiner (soit bloquer, soit ralentir) l’attaquant ?
+1. Mécanismes de protection contre les attaques par brut force, par exemple en instaurant des CAPTCHAs.
+2. MFA
 
 ### Question 2.19 Les mots de passe ne sont pas stockés en clair, pourquoi ?
+Cela exposerait les utilisateurs à des menaces potentielles.
 
 ### Question 2.20 Les mots de passe ne sont pas stockés en clair, mais pourtant ils ne sont pas chiffrés, pourquoi ?
+Car le chiffrement est un processur réversible, donc potentiellement on pourra retrouver le mot de passe en le déchiffrant ce qui diminuerait la sécurité de cette pratique.
 
 ### Question 2.21 Sous quelle forme sont stockés les mots de passe ?
+Sous forme de hachage, pour pallier au problème cité ci-dessus.
 
 ## 3 Identification des empreintes des mots de passe
 
