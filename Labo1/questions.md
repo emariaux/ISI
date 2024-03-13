@@ -190,5 +190,23 @@ Aucun résultat de trouvé
 ```bash
 hashcat -m 1000 -a 3 -o Documents/output.txt  Documents/XPHash.txt ?s?a --increment --increment-max 6 --force
 ```
+Aucun résultat de trouvé
+
+### Manipulation 4.6
+```bash
+TODO
+```
+
+### Manipulation 4.7
+```bash
+
+```
+
+### Question 4.9
+Les "rules" sont utilisées pour modifier les entrées de mot de passe lors d'une attaque par dictionnaire. Cela permet de tester plus de mot de passe. En mettant une majuscule au début des chiffres à la fin. Remplacement d'un "e" par "3".
+C'est utilisé avec les modes 0 et 1.
+
+### Question 4.10
 
 
+### Question 4.11
