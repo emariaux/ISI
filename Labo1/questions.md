@@ -26,15 +26,36 @@ Il y a 1 (36^0) + 36 (36^1) + 1296 (36^2) + 46656 (36^3) + 167 * 10^4 (36^4) + 6
 Il y a 62 possibilités.
 
 ### Question 2.9 - Exactement 8 caractères alphanumériques (sensible à la casse) ?
-
+62^8 possibilités 
 ### Question 2.10 - Entre 0 et 8 caractères alphanumériques (sensible à la casse) ?
-
+1 + 62 + 62^2 + 62^3 + 62^4 + 62^5 + 62^6 + 62^7 + 62^8
 ### Question 2.11 - Exactement 1 caractère ASCII (7 bits) ?
-
+128
 ### Question 2.12 - Exactement 8 caractères ASCII ?
-
+128^8 possibilités 
 ### Question 2.13 - Entre 0 et 8 caractères ASCII ?
+1 + 128 + 128^2 + 128^3 + 128^4 + 128^5 + 128^6 + 128^7 + 128^8
 
+### Question 2.14 Combien de temps faudra-t-il « en moyenne » pour casser un mot de passe de la question 2.6 ?
+Il faut la moitié donc 0.5 jours = 12 heures
+
+### Question 2.15 Toujours avec la même base, combien de temps faudra-t-il « au maximum » pour casser un mot de passe de la question 2.12 ?
+282.11 * 10^10 = 1 jour
+128^8 = 25542.37 jour
+### Question 2.16 Combien de temps faudra-t-il « en moyenne » pour casser un mot de passe de la question 2.12 ?
+25542.37 jour / 2 = 12771.19 jours
+
+
+### Question 2.17 En considérant des attaques « hors ligne », décrire trois manières de freiner (soit bloquer, soit ralentir) l’attaquant ?
+
+
+### Question 2.18 En considérant des attaques « en ligne », décrire deux manières de freiner (soit bloquer, soit ralentir) l’attaquant ?
+
+### Question 2.19 Les mots de passe ne sont pas stockés en clair, pourquoi ?
+
+### Question 2.20 Les mots de passe ne sont pas stockés en clair, mais pourtant ils ne sont pas chiffrés, pourquoi ?
+
+### Question 2.21 Sous quelle forme sont stockés les mots de passe ?
 
 ## 3 Identification des empreintes des mots de passe
 
