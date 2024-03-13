@@ -225,6 +225,14 @@ generated.rule règle généré automatiquement avec un beaucoup de transformati
 ### Question 4.11
 letspeak.rule transfrorme les mots avec des substitutions les e remplacé par 3, a par 4 
 
+### Manipulation 4.8
+```bash
+hashcat -m 1000 -a 0  -o Documents/output.txt Documents/XPHash.txt -r /usr/share/hashcat/rules/leetspeak.rule
+```
+Aucun résultat
+
+### Question 4.12
+Non, Il y a plusieurs possiblités. Les mots de passe était trop complexe ou nous avons pas utilisé les bon paramètres à certaines étapes avec la commande hashcat.
 
 
 ## Résultat :
