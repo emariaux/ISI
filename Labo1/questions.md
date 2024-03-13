@@ -234,6 +234,11 @@ Aucun résultat
 ### Question 4.12
 Non, Il y a plusieurs possiblités. Les mots de passe était trop complexe ou nous avons pas utilisé les bon paramètres à certaines étapes avec la commande hashcat.
 
+### Manipulation 5.1
+![image](https://github.com/emariaux/ISI/assets/114927416/a67d6c94-b344-4cc9-b3ad-c4899879761d)
+
+### Question 5.1
+Le sel rend inutilisable rainbow table car chaque hash est unique selon l'utilisateur. Car chaque utilisateur à un sel unique. Il n'est donc pas possible de comparer les hash. Par exemple si deux utilisateurs mettent le mot de passe "1234" le hach sera différent pour chacun d'entre eux. Donc les rainbow table ne peuvent pas comparer le hash.
 
 ## Résultat :
 ### Question 6.1
@@ -242,8 +247,27 @@ Non, Il y a plusieurs possiblités. Les mots de passe était trop complexe ou no
 |Eve         | nceipo        | hashcat | -a 3 bruteforce |
 |Mallory     | juliette173   | hashcat | -a 6 dictionnaire + mask|
 |Alice       | funtime       | hascat  | -a default dictionnaire|
-|Bob         | !XS8D?@ | rainbow table  |
-|Dave        | 57R4WB3 | | |
-|Carol       | RDQOM| | |
-|Oscar       | ?XA1W| | |
-|Trudy       | 9823029 | | |
+|Bob         | !XS8D?@ | rainbow table  | |
+|Dave        | 57R4WB3 | rainbow table| |
+|Carol       | RDQOM|  rainbow table| |
+|Oscar       | ?XA1W| rainbow table | |
+|Trudy       | 9823029 | rainbow table| |
+
+### Question 7.1
+|    | Hashcat | Rainbow talbes | Explications |
+|------------|---------------|---------|---------|
+| Méthode(s) de craquage | + | - | Le hashcat est mieux car il fonctionne même un sel si on bruteforce. Rainbow table fonctionne uniquement sans sel. |
+|Temps de craquage | - | + | Rainbow table est plus rapide lorsque l'on a déjà les hash. Hashcat peut prendre long afin de tester les multiples posssibilités. |
+|Temps de préparation avant craquage| + | - | Haschat est rapide à préparer il nous suffit d'avoir le/les hash et un dictionnaire si nécessaire. Rainbow tables peut être long si on doit créer une table. Cependant si elle est déjà calculé cela est rapide. |
+|Craquage sur tous les OS| +| + | Les deux sont multi OS. Après on ne peut pas crack un mot de passe Linux avec Rainbow tables|
+
+### Manipulation 8.1
+Impossible d'utiliser l'outil. TODO
+### Question 8.1
+TODO
+### Question 8.2
+Rainbow tables il a un map entre les hash et les mots de passe en clair. Il regarde dans toute la base de données afin de voir s'il y a une correspondance.
+
+### Question 8.3
+Si ce n'est pas un mot de passe qui est dans la base de données, CrackStation ne pourra pas le retrouver. 
+
