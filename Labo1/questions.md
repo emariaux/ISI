@@ -292,7 +292,7 @@ Le sel rend inutilisable rainbow table car chaque hash est unique selon l'utilis
 ### Manipulation 8.1
 Impossible d'utiliser l'outil. TODO
 ### Question 8.1
-TODO
+SHA-512 car 128 caractères dans le hash
 ### Question 8.2
 Rainbow tables il a un map entre les hash et les mots de passe en clair. Il regarde dans toute la base de données afin de voir s'il y a une correspondance.
 
