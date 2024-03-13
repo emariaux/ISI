@@ -242,8 +242,8 @@ Non, Il y a plusieurs possiblités. Les mots de passe était trop complexe ou no
 |Eve         | nceipo        | hashcat | -a 3 bruteforce |
 |Mallory     | juliette173   | hashcat | -a 6 dictionnaire + mask|
 |Alice       | funtime       | hascat  | -a default dictionnaire|
-|Bob         | | | |
-|Dave        | | | |
-|Carol       | | | |
-|Oscar       | | | |
-|Trudy       | | | |
+|Bob         | !XS8D?@ | rainbow table  |
+|Dave        | 57R4WB3 | | |
+|Carol       | RDQOM| | |
+|Oscar       | ?XA1W| | |
+|Trudy       | 9823029 | | |
