@@ -4,22 +4,11 @@
 ### Question 2.1 
 > Décrire ce qu’est un maliciel ainsi que ses caractéristiques.
 
-Un maliciel est une méthode d'attaque consitant à infiltrer, compromettre ou endommager un système informatique sans que l'utilisateur n'en ait connaissance.
+Un maliciel est logiciel malveillant se faisant passer pour un programme légitime qui a pour but d'exécuter un code malveillant.
 
 Ses caractéristiques sont les suivantes :
-- Fonctionnement en arrière plan
-- Vol d'informations
-- Propagation sur d'autres systèmes
-- Prise de contrôle à distance
-- Cryptage des données
-
-  RLDS:
-  Malwares = Malicious Software =Logiciel Malveillant
-   - Code exécutable, fonctionnalité malveillante, capacité de propagation
-   - Nombreuses fonctionnalités ; Spyware, Backdoors, Trojan, Rootkits
-  Dégats
-  - Perte de confidentialité, données, fonctionnalité (Ex : e-mail), temps, image de marque, financière, intrusion, vol
-
+- Capacité de propagation
+- Intrusion à travers une source infectée
 
 ### Question 2.2 
 > Quelles sont les différentes catégories et fonctionnalités des maliciels.
@@ -27,7 +16,7 @@ Ses caractéristiques sont les suivantes :
 Nous retrouvons ces différentes catégories.
 
 #### Cheval de troie 
-Un cheval de troie est un logiciel qui apparaît comme utile, mais en réalité il cache des fonctionnalités malveillantes.
+Un cheval de troie est un programme qui apparaît comme utile, mais en réalité il cache des fonctionnalités malveillantes.
 
 Il permet l'installation d'autres maliciels tel qu'une porte dérobée, un ransomware, etc.
 
@@ -45,6 +34,9 @@ Ces bots sont utilisés pour mener des attaques depuis l'intérieur d'un réseau
 Un rootkit est un code malveillant qui modifie le système d'exploitation dans le but de dissimuler un autre maliciel. 
 
 Il permet de cacher des fichiers, des processus ou des connexions malveillantes.
+
+#### Ransomware
+Un ransomware est un logiciel qui a pour but de chiffrer les données d'un système et d'exiger une rançon à la victime en échange de la clé de déchiffrement.
 
 ### Question 2.3 
 > Tenter de trouver des fonctionnalités non données en cours, faire travailler son imagination !
