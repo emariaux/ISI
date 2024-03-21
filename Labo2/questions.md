@@ -42,3 +42,16 @@ Un ransomware est un logiciel qui a pour but de chiffrer les données d'un syst�
 > Tenter de trouver des fonctionnalités non données en cours, faire travailler son imagination !
 
 On pourrait rajouter l'export des mots de passe sauvegardés dans un naviguateur.
+
+## Analyse du Malware « Live Messenger »
+### Scène 1 : analyse de l'exécutable
+### Scène 2 : analyse par snapshots
+### Scène 3 : analyse comportementale
+### Scène 4 : étude du fichier de configuration
+### Scène 5 : analyse des communications réseau
+### Scène 6 : simulation de services Web
+### Scène 7 : analyse statique
+
+## Analyse à l’aide d’outils en ligne
+
+
