@@ -1,7 +1,9 @@
 # Labo 2 - Malware
 
 ## Les maliciels
-### Question 2.1 - Décrire ce qu’est un maliciel ainsi que ses caractéristiques.
+### Question 2.1 
+> Décrire ce qu’est un maliciel ainsi que ses caractéristiques.
+
 Un maliciel est une méthode d'attaque consitant à infiltrer, compromettre ou endommager un système informatique sans que l'utilisateur n'en ait connaissance.
 
 Ses caractéristiques sont les suivantes :
@@ -11,7 +13,9 @@ Ses caractéristiques sont les suivantes :
 - Prise de contrôle à distance
 - Cryptage des données
 
-### Question 2.2 - Quelles sont les différentes catégories et fonctionnalités des maliciels.
+### Question 2.2 
+> Quelles sont les différentes catégories et fonctionnalités des maliciels.
+
 Nous retrouvons ces différentes catégories.
 
 #### Cheval de troie 
@@ -34,6 +38,7 @@ Un rootkit est un code malveillant qui modifie le système d'exploitation dans l
 
 Il permet de cacher des fichiers, des processus ou des connexions malveillantes.
 
-### Question 2.3 - Tenter de trouver des fonctionnalités non données en cours, faire travailler son imagination !
+### Question 2.3 
+> Tenter de trouver des fonctionnalités non données en cours, faire travailler son imagination !
 
 On pourrait rajouter l'export des mots de passe sauvegardés dans un naviguateur.
