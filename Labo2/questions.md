@@ -13,6 +13,14 @@ Ses caractéristiques sont les suivantes :
 - Prise de contrôle à distance
 - Cryptage des données
 
+  RLDS:
+  Malwares = Malicious Software =Logiciel Malveillant
+   - Code exécutable, fonctionnalité malveillante, capacité de propagation
+   - Nombreuses fonctionnalités ; Spyware, Backdoors, Trojan, Rootkits
+  Dégats
+  - Perte de confidentialité, données, fonctionnalité (Ex : e-mail), temps, image de marque, financière, intrusion, vol
+
+
 ### Question 2.2 
 > Quelles sont les différentes catégories et fonctionnalités des maliciels.
 
