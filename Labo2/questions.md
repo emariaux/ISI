@@ -15,6 +15,9 @@ Ses caractéristiques sont les suivantes :
 
 Nous retrouvons ces différentes catégories.
 
+#### Ver
+Un ver est un programme qui se reproduit automatiquement et qui se propage de manière autonome à travers le réseau.
+
 #### Cheval de troie 
 Un cheval de troie est un programme qui apparaît comme utile, mais en réalité il cache des fonctionnalités malveillantes.
 
