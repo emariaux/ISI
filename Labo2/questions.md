@@ -62,15 +62,18 @@ e69d26db431e383131826fab5db213559ee68814  Windows Live Messenger.exe
 
 #### Question 5.1
 > Illustrer et expliquer les manipulations effectuées.
+
 Nous avons calculer le checksum pour le md5 et le sha1.
 Cela est un outil de vérification afin de vérifier que nous avons le .exe originel.
 
 #### Question 5.2
 > Que peut-on déduire du fait que les empreintes ne correspondent pas ?
+
 Cela signifie que le .exe a été modifié. Ce n'est donc pas le version originel de l'exe.
 
 #### Question 5.3
 > À votre avis, pourquoi est-il utile de vérifier l’intégrité d’un programme téléchargé ?
+
 Cela nous permet de vérifier l'intégrité du programme. Si le checksum ne correspond pas, nous devons nous méfier du .exe.
 
 ### Scène 2 : analyse par snapshots
