@@ -389,7 +389,7 @@ Virus Total et MetaDefender le considère comme un cheval de Troie.
 #### Question 5.24
 > Quelle est l’utilité d’un tel code malveillant ?
 
-Pouvoir accèder aux comptes MSN de pluieurs personnes.
+Pouvoir accèder aux comptes MSN de plusieurs personnes.
 Ensuite, le but est de soutirer de l'argent aux proches de la victime en se faisant passer pour elle sur MSN.
 
 #### Question 5.25
