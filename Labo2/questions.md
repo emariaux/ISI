@@ -63,13 +63,13 @@ e69d26db431e383131826fab5db213559ee68814  Windows Live Messenger.exe
 #### Question 5.1
 > Illustrer et expliquer les manipulations effectuées.
 
-Nous avons calculer le checksum pour le md5 et le sha1.
-C'est un outil de vérification afin de vérifier que nous avons le .exe originel.
+Nous avons calculé le checksum pour le md5 et le sha1.
+Cet outil sert à vérifier que nous avons le .exe originel.
 
 #### Question 5.2
 > Que peut-on déduire du fait que les empreintes ne correspondent pas ?
 
-Nous pouvons déduire que le .exe a été modifié. Ce n'est donc pas le version originel de l'exe.
+Nous pouvons déduire que le .exe a été modifié. Ce n'est donc pas le version original de l'exe.
 
 #### Question 5.3
 > À votre avis, pourquoi est-il utile de vérifier l’intégrité d’un programme téléchargé ?
@@ -91,35 +91,35 @@ $ wine " Windows Live Messenger.exe"
 #### Question 5.4
 > À quoi sert l’outil « Regshot » ?
 
-Regshot est un logiciel permettant d'effectuer une capture du système d'eploitation à un instant T, puis un second.
-Ensuite, nous pouvons comparer les modifications qui ont été apportés au système durant le laps de temps des deux shots.
-Nous pouvons voire les nouvelles clé de registres ou de nouveaux fichiers.
+Regshot est un logiciel permettant d'effectuer une capture du système d'exploitation à un instant T, puis un second.
+Ensuite, nous pouvons comparer les modifications qui ont été apportées au système durant le laps de temps des deux shots.
+Nous pouvons voir les nouvelles clé de registres ou les nouveaux fichiers.
 
 #### Question 5.5
 > Pourquoi utiliser un environnement de « test » cloisonné ?
 Pourquoi utilise-t-on le « snapshot » dans les logiciels de virtualisation (Virtualbox,
 VMware, . . .) ?
 
-Cela nous permet d'excécuter des logiciels malveillant dans des environnement cloisonné.
-Donc nous n'impactons pas notre système d'exploitation.
+Cela nous permet d'excécuter des logiciels malveillant dans des environnements cloisonnés.
+Donc, nous n'impactons pas notre système d'exploitation.
 Les snapshots nous permettent de revenir à l'instant T de notre VM.
-Cela est utilile lorsque nous effectuons des tests afin de pouvoir revenir a un état non corrompu de la VM.
+Cela est utile lorsque nous effectuons des tests afin de pouvoir revenir a un état non corrompu de la VM.
 
 #### Question 5.6
 > Illustrer et expliquer les manipulations effectuées
 
-Dans un premier temps nous avons effectué un regshot de notre VM.
+Dans un premier temps, nous avons effectué un regshot de notre VM.
 Cela signifie que nous avons capturé notre système à ce moment là.
 
 Ensuite, nous avons excectué le logiciel malveillant.
 
 Nous avons effectué un second regshot.
-Pour finir, nous avons comparé les modifications apportées au système entre les deux regshots
+Pour finir, nous avons comparé les modifications apportées au système entre les deux regshots.
 
 #### Question 5.7
 > Que constatez-vous dans le rapport généré par Regshot ?
 
-Une nouvelle clé de registe a été créée et deux nouveaux fichiers.
+Une nouvelle clé de registre a été créée et deux nouveaux fichiers.
 
 #### Question 5.8
 > Que contiennent les fichiers créés par le maliciel ?
@@ -170,18 +170,18 @@ $ strace -e trace=%file wine Windows\ Live\ Messenger.exe 1>output_file 2>&1
 > À quoi sert « strace » ?
 
 Strace permet de suivre les appels effectués au système par une application. 
-Nous pouvons donc ensuite tracer les actions effectuées par le programme.
+Nous pouvons donc tracer les actions effectuées par le programme.
 
 #### Question 5.10
 > Illustrer et expliquer les manipulations effectuées.
 
-Nous avons lancer strace afin qu'il suivent les appels au système effectué par l'application en l'excécutant avec wine.
+Nous avons lancé strace afin qu'il suive les appels au système effectué par l'application excécutée avec wine.
 
 #### Question 5.11
 > Quel type de filtre a été utile et efficace pour réaliser la capture ?
 
 le filtre -e trace=%file. Cela permet de capturer les appels systèmes relatifs aux fichiers.
-Donc une ouverture, modification. 
+Donc une ouverture, une modification, etc. 
 Cela nous permet de visualiser si le programme accède à des fichiers dont il n'a pas besoin et de voir les fichiers qu'il crée.
 
 #### Question 5.12
@@ -189,8 +189,8 @@ Cela nous permet de visualiser si le programme accède à des fichiers dont il n
 détail.
 Indice : Regarder la taille des fichiers
 
-En effectuant un grep sur pas.txt dans le fichier d'output, nous pouvons voir q'il a créé deux fois le fichier.
-Cela est du au fait que j'ai rentré deux fois les informations de connexions.
+En effectuant un grep sur pas.txt dans le fichier d'output, nous pouvons voir qu'il a créé deux fois le fichier.
+Cela est dû au fait que j'ai rentré deux fois les informations de connexions.
 Cependant, dans le fichier pas.txt on voit que les identifiants du deuxième essai.
 
 ```bash
@@ -242,18 +242,18 @@ Il comprend de multiples paramètres.
 #### Question 5.14
 > Quels types d’informations le fichier comprend-il ?
 
-La dernière ligne, c'est ou le fichier pas.txt est créé.
-La ligne c:\Program Files\MSN Messenger\msnmsgr.exe c'est le chemin d'accès au exe.
+La dernière ligne, c'est où le fichier pas.txt est créé.
+La ligne c:\Program Files\MSN Messenger\msnmsgr.exe correspond au chemin d'accès au exe.
 Comme l'application standard.
 Nous avons également une adresse email ainsi qu'un serveur smtp de google.
-Autrement c'est plusieurs paramètres tous séparé par des retours à la ligne.
+Autrement, c'est plusieurs paramètres tous séparés par des retours à la ligne.
 
 #### Question 5.15
 > Quelles conclusions en tirez-vous ? Pouvez-vous affirmer ces conclusions ?
 
 En modifiant la dernière ligne on peut caché le fichier pas.txt au lieu de le mettre à la racine.
 Nous avons modifié et mis c:/test et le fichier est bien maintenant dans le fichier test.
-Nous pourrions imaginer le caché dans un dossier système afin que l'utilisateur ne puisse pas le voir.
+Nous pourrions imaginer le cacher dans un dossier système afin que l'utilisateur ne puisse pas le voir.
 
 
 ### Scène 5 : analyse des communications réseau
@@ -297,7 +297,7 @@ fakedns simule un vrai dns. A chaque requête, il effectue la résolution en don
 
 Tout d'abord dans resolv.conf, nous avons indiquer que notre serveur DNS était nous même.
 Ensuite, nous avons lancé fakedns en indiquant l'ip 192.168.142.1. Cela est l'IP que le DNS va indiquer à chaque requête.
-Nous avons ensuite excétuté le programme avec wine. 
+Nous avons ensuite exécuté le programme avec wine. 
 
 #### Question 5.18
 > Quels types d’informations ont été capturées grâce à Wireshark ?
@@ -339,13 +339,13 @@ sudo wireshark
 > Illustrer et expliquer les manipulations effectuées.
 
 Nous avons enlevé le DNS que nous avions spécifié à l'étape précédente.
-Nous avons excétuté inetsim
+Nous avons exécuté inetsim
 ![image](https://github.com/emariaux/ISI/assets/114927416/cf2da41f-6db2-4e86-bd2f-368e6634c21a)
 
-Wireshark a capturé un envoit de mail.
+Wireshark a capturé un envoie de mail.
 l'adresse d'envoi est yourpassword@password.com et la destination est isi_lab16@gmail.com.
 Celle-ci correspond a l'adresse que l'on a mis dans le fichier msnsettings.dat.
-On peut également voir le username et le mot de passe rentré.
+On peut également voir le username et le mot de passe entrés.
 ![image](https://github.com/emariaux/ISI/assets/114927416/f1b3bd00-2f4a-4267-9ed4-b6ded3231946)
 
 
@@ -356,7 +356,7 @@ de maliciels « Windows Live Messenger » appartient ? Pourquoi ?
 C'est un cheval de Troie. En effet, le malicien simule Windows Live Messenger. 
 Mais il contient du code malicieux.
 
-C'est également ce que l'on appel un logiciel espion.
+C'est également ce que l'on appelle un logiciel espion.
 Il enregistre les informations de connexions de l'utilisateur.
 
 ### Scène 7 : analyse statique
@@ -369,7 +369,7 @@ Il enregistre les informations de connexions de l'utilisateur.
 > Que pouvez-vous en déduire ?
 
 Une fenêtre avec de nombreux paramètres s'ouvre.
-C'est l'ensemble des options que sont spécifié dans le fichier msnsettings.dat
+C'est l'ensemble des options qui sont spécifiées dans le fichier msnsettings.dat
 ISI16 dans le fichier correspond à l'email qu'il faut rentrer pour voir cette option.
 les 0,-1 dans le fichier correspondent à une option des radio button.
 
@@ -378,7 +378,7 @@ les 0,-1 dans le fichier correspondent à une option des radio button.
 #### Manipulation 5.15
 Le hash md5 a7a75a56b4b960c8532c37d3c705f88f a été mis dans MetaDefender et Virustotal.
 Cela nous permet de voir que le logiciel est connu comme malveillant.
-Les deux sites le considère que un cheval de Troie.
+Les deux sites le considère comme un cheval de Troie.
 
 #### Question 5.23
 > À quelle(s) catégorie(s) de codes malveillants appartient ce code malveillant ? (virus,
@@ -396,7 +396,7 @@ Ensuite, le but est de soutirer de l'argent aux proches de la victime en se fais
 > Comment se propage ce code malveillant ?
 
 Il se propage avec le partage de l'exe.
-L'exe peut être placé sur des sites web et les utilisateurs le télécharge en passant télécharger MSN.
+L'exe peut être placé sur des sites web et les utilisateurs le téléchargent en penssant télécharger MSN.
 
 #### Question 5.26
 > Comment l’infection par ce code malveillant est-elle réalisée ?
