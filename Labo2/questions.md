@@ -100,8 +100,9 @@ Nous pouvons voir les nouvelles clé de registres ou les nouveaux fichiers.
 Pourquoi utilise-t-on le « snapshot » dans les logiciels de virtualisation (Virtualbox,
 VMware, . . .) ?
 
-Cela nous permet d'excécuter des logiciels malveillant dans des environnements cloisonnés.
+Cela nous permet d'exécuter des logiciels malveillant dans des environnements cloisonnés.
 Donc, nous n'impactons pas notre système d'exploitation.
+
 Les snapshots nous permettent de revenir à l'instant T de notre VM.
 Cela est utile lorsque nous effectuons des tests afin de pouvoir revenir a un état non corrompu de la VM.
 
@@ -111,7 +112,7 @@ Cela est utile lorsque nous effectuons des tests afin de pouvoir revenir a un é
 Dans un premier temps, nous avons effectué un regshot de notre VM.
 Cela signifie que nous avons capturé notre système à ce moment là.
 
-Ensuite, nous avons excectué le logiciel malveillant.
+Ensuite, nous avons exécuté le logiciel malveillant.
 
 Nous avons effectué un second regshot.
 Pour finir, nous avons comparé les modifications apportées au système entre les deux regshots.
@@ -255,6 +256,7 @@ En modifiant la dernière ligne on peut caché le fichier pas.txt au lieu de le 
 Nous avons modifié et mis c:/test et le fichier est bien maintenant dans le fichier test.
 Nous pourrions imaginer le cacher dans un dossier système afin que l'utilisateur ne puisse pas le voir.
 
+Au final, on peut en déduire que ce fichier contient la configuration du maliciel.
 
 ### Scène 5 : analyse des communications réseau
 
