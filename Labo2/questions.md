@@ -396,7 +396,7 @@ Ensuite, le but est de soutirer de l'argent aux proches de la victime en se fais
 > Comment se propage ce code malveillant ?
 
 Il se propage avec le partage de l'exe.
-L'exe peut être placé sur des sites web et les utilisateurs le télécharge.
+L'exe peut être placé sur des sites web et les utilisateurs le télécharge en passant télécharger MSN.
 
 #### Question 5.26
 > Comment l’infection par ce code malveillant est-elle réalisée ?
