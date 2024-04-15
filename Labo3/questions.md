@@ -23,6 +23,7 @@ Détournement de session en changeant l'url afin d'accéder à un autre utilisat
 
 #### c)
 > Détailler la méthode utilisée pour se connecter en tant que « admin ».
+
 Il suffit simplement de modifier l'url en mettant l'id 1 qui correspond à l'utilisateur admin à la place de l'id 2 qui correspond à l'utilisateur test.
 
 https://isi-labs.iict.ch/gr30/part1/member.php?id=1
