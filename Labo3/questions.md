@@ -13,7 +13,21 @@ Il suffit simplement de modifier l'url en mettant l'id 1 qui correspond à l'uti
 https://isi-labs.iict.ch/gr30/part1/member.php?id=1
 
 ### Question 4.1
-#### a)
+#### a) 
+> Quel type d’attaque est effectuée ici ?
 Détournement de session en changeant l'url afin d'accéder à un autre utilisateur.
 
 #### b)
+> Quelle technique d’exploitation avez-vous utilisée ?
+
+
+#### c)
+> Détailler la méthode utilisée pour se connecter en tant que « admin ».
+Il suffit simplement de modifier l'url en mettant l'id 1 qui correspond à l'utilisateur admin à la place de l'id 2 qui correspond à l'utilisateur test.
+
+https://isi-labs.iict.ch/gr30/part1/member.php?id=1
+
+### Question 4.2
+> Quelle est/sont la/les vulnérabilité(s) du top10 de l’OWASP (2021) présente(s) ici (et
+qui permet(tent) de se connecter en tant qu’admin) ?
+
