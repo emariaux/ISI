@@ -15,6 +15,7 @@ https://isi-labs.iict.ch/gr30/part1/member.php?id=1
 ### Question 4.1
 #### a) 
 > Quel type d’attaque est effectuée ici ?
+
 Détournement de session en changeant l'url afin d'accéder à un autre utilisateur.
 
 #### b)
