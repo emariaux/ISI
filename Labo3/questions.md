@@ -16,11 +16,11 @@ https://isi-labs.iict.ch/gr30/part1/member.php?id=1
 #### a) 
 > Quel type d’attaque est effectuée ici ?
 
-Détournement de session en changeant l'url afin d'accéder à un autre utilisateur.
+Une tentative d'escalade de privilèges, visant à obtenir des privilèges d'administrateur sur l'application Web (détournement de session).
 
 #### b)
 > Quelle technique d’exploitation avez-vous utilisée ?
-
+La technique d'exploitation utilisé est une faille dans l'application donnant accès aux autres comptes, et cela grâce à une injection SQL.
 
 #### c)
 > Détailler la méthode utilisée pour se connecter en tant que « admin ».
