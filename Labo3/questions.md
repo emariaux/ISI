@@ -20,7 +20,8 @@ Une tentative d'escalade de privilèges, visant à obtenir des privilèges d'adm
 
 #### b)
 > Quelle technique d’exploitation avez-vous utilisée ?
-La technique d'exploitation utilisé est une faille dans l'application donnant accès aux autres comptes, et cela grâce à une injection SQL.
+
+La technique d'exploitation utilisée est une faille dans l'application donnant accès aux autres comptes directement en manipulant l'url de HTTP.
 
 #### c)
 > Détailler la méthode utilisée pour se connecter en tant que « admin ».
@@ -46,4 +47,11 @@ Voici la liste :
 En ne spécifiant pas l'id d'un user directement dans l'URL.
 Cela permettrait de ne pas pouvoir uniquement modifier l'URL afin de se connecter avec un autre compte.
 
+## Partie 2 - Application mail 2
+### Question 5.1
+> Comment êtes-vous parvenu à vous connecter en tant qu’« admin » ?
+> Montrez avec une capture d’écran que vous y êtes parvenu.
+
+En modifiant le cookie de la session de l'utilisateur test dans la requête HTTP.
+Ces valeurs ont été remplacées par l'utilisateur admin, son role et son id.
 
