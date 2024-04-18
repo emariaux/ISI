@@ -52,6 +52,21 @@ Cela permettrait de ne pas pouvoir uniquement modifier l'URL afin de se connecte
 > Comment êtes-vous parvenu à vous connecter en tant qu’« admin » ?
 > Montrez avec une capture d’écran que vous y êtes parvenu.
 
-En modifiant le cookie de la session de l'utilisateur test dans la requête HTTP.
-Ces valeurs ont été remplacées par l'utilisateur admin, son role et son id.
+En modifiant le cookie de la session de l'utilisateur test dans la requête HTTP, il sera possible d'être connecté en tant qu'admin.
 
+Les valeurs suivantes ont été remplacées par l'utilisateur admin, son role et son id.
+![](./Question_5.1_manip.png)
+
+Ensuite, nous pouvons voir que nous sommes connectés avec l'utilisateur admin.
+![](./Question_5.1_admin.png)
+
+### Question 5.2
+> Quelle est/sont la/les vulnérabilité(s) du top10 de l’OWASP (2021) présente(s) ici (et
+> qui permet(tent) de se connecter en tant qu’admin) ?
+
+s
+
+### Question 5.3
+> Comment remédier à cette faille ? Justifiez.
+
+as
