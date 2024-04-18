@@ -88,16 +88,33 @@ Il suffit de mettre dans le champs Username : ' OR '1'='1, ce qui va nous donner
 > Identifier la vulnérabilité exploitée (le top10 peut être utile).
 > Expliquer la méthode d’exploitation utilisée pour afficher l’ensemble des salaires.
 
-a
+Nous avons utilisé l'injection SQL.
+Dans le top 10 c'est A03 2021 - Injection.
+Cette techique nous a permis d'afficher tous les salaires.
+
+Il suffit de mettre dans le champs Username : ' OR '1'='1, ce qui va nous donner que la condition sera toujours vrai donc tous les salaires seront affichés.
+
+### Manipulation 6.3
+> Modifiez votre salaire (le doubler).
+Il est important de ne pas compromettre l’utilisation de l’application, c’est-à-dire de
+ne modifier aucune donnée (sauf celle demandée).
+
+
+```
+`; UPDATE Employees SET Salary = 174000 WHERE Name='TestLabo
+```
 
 ### Question 6.2
 > Identifier la vulnérabilité exploitée (le top10 peut être utile).
 > Expliquer la méthode d’exploitation utilisée pour doubler votre salaire.
 
+C'est également de l'injection SQL.
+A03 2021 - Injection.
+
 Il faut ajouter '; ainsi que la requête SQL permettant de mettre à jour le salaire :
 
 ```
-UPDATE Employees SET Salary = 174000 WHERE Name='TestLabo'
+`; UPDATE Employees SET Salary = 174000 WHERE Name='TestLabo
 ```
 
 Grâce à cela, on pourra envoyer une requête SQL supplémentaire au serveur.
@@ -105,3 +122,18 @@ Grâce à cela, on pourra envoyer une requête SQL supplémentaire au serveur.
 Ensuite, si on affiche le salaire de l'utilisateur TestLabo, on pourra voir qu'il a effectivement été doublé.
 
 ![](./Question_6.2_result.png)
+
+### Question 6.3
+> Quelle est/sont la/les vulnérabilité(s) du top10 de l’OWASP (2021) présente(s) dans
+cette application ?
+
+- A01 2021 - Broken Access Control
+- A03 2021 - Injection
+- A04 2021 - Insecure Design
+- A05 2021 - Security Misconfiguration
+
+
+### Question 6.4
+> Comment remédier à cette faille ?
+
+Pour la partie écriture, nous pouvons limiter les droits de l'application sur la base de données.
