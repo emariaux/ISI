@@ -94,4 +94,14 @@ a
 > Identifier la vulnérabilité exploitée (le top10 peut être utile).
 > Expliquer la méthode d’exploitation utilisée pour doubler votre salaire.
 
-a
+Il faut ajouter '; ainsi que la requête SQL permettant de mettre à jour le salaire :
+
+```
+UPDATE Employees SET Salary = 174000 WHERE Name='TestLabo'
+```
+
+Grâce à cela, on pourra envoyer une requête SQL supplémentaire au serveur.
+
+Ensuite, si on affiche le salaire de l'utilisateur TestLabo, on pourra voir qu'il a effectivement été doublé.
+
+![](./Question_6.2_result.png)
