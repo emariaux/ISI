@@ -137,3 +137,16 @@ cette application ?
 > Comment remédier à cette faille ?
 
 Pour la partie écriture, nous pouvons limiter les droits de l'application sur la base de données.
+
+## Partie 4 - Achat d’œufs
+### Question 7.1
+> Expliquer comment vous avez procédé pour exploiter ce service.
+
+Dans la requête HTTP, il suffit de modifier le prix de l'oeuf à 0.50 centime par exemple afin qu'on puisse en acheter 12 avec 10 CHF.
+
+![](./Manip_7.2.png)
+
+### Question 7.2
+> Proposer une manière de corriger la vulnérabilité que vous avez découverte.
+
+En enlevant le prix de l'oeuf dans la requête HTTP, on pourra supprimer cette vulnérabilité.
