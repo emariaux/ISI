@@ -36,10 +36,10 @@ qui permet(tent) de se connecter en tant qu’admin) ?
 
 Plusieurs vulérabilités de ce site sont relatées dans le rapport.
 Voici la liste :
-- A04:2021-Insecure Design
-- A05:2021-Security Misconfiguration
-- A06:2021-Vulnerable and Outdated Components
-- A07:2021-Identification and Authentication Failures
+- A01 2021 - Broken Access Control
+- A04 2021 - Insecure Design
+- A05 2021 - Security Misconfiguration
+- A07 2021 - Identification and Authentication Failures
 
 ### Question 4.3
 >Comment pourrait-on remédier à cette faille ? Justifiez
@@ -64,9 +64,13 @@ Ensuite, nous pouvons voir que nous sommes connectés avec l'utilisateur admin.
 > Quelle est/sont la/les vulnérabilité(s) du top10 de l’OWASP (2021) présente(s) ici (et
 > qui permet(tent) de se connecter en tant qu’admin) ?
 
-s
+- A01 2021 - Broken Access Control
+- A04 2021 - Insecure Design
+- A05 2021 - Security Misconfiguration
+- A07 2021 - Identification and Authentication Failures
 
 ### Question 5.3
 > Comment remédier à cette faille ? Justifiez.
 
-as
+Que les informations du users et du role ne soit pas directement stokcé en clair dans le cookie.
+
