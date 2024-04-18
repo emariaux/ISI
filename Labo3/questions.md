@@ -74,3 +74,24 @@ Ensuite, nous pouvons voir que nous sommes connectés avec l'utilisateur admin.
 
 Que les informations du users et du role ne soit pas directement stokcé en clair dans le cookie.
 
+## Partie 3 – Salaires
+### Manipulation 6.2
+> Afficher les salaires de tous les employés (en une seule fois).
+> A nouveau, il est important de ne pas compromettre l’utilisation de l’application,
+> c’est-à-dire de ne modifier aucune donnée.
+
+Il suffit de mettre dans le champs Username : ' OR '1'='1, ce qui va nous donner que la condition sera toujours vrai donc tous les salaires seront affichés.
+
+![](./Question_6.2_manip.png)
+
+### Question 6.1
+> Identifier la vulnérabilité exploitée (le top10 peut être utile).
+> Expliquer la méthode d’exploitation utilisée pour afficher l’ensemble des salaires.
+
+a
+
+### Question 6.2
+> Identifier la vulnérabilité exploitée (le top10 peut être utile).
+> Expliquer la méthode d’exploitation utilisée pour doubler votre salaire.
+
+a
