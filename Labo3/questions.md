@@ -33,3 +33,17 @@ https://isi-labs.iict.ch/gr30/part1/member.php?id=1
 > Quelle est/sont la/les vulnérabilité(s) du top10 de l’OWASP (2021) présente(s) ici (et
 qui permet(tent) de se connecter en tant qu’admin) ?
 
+Plusieurs vulérabilités de ce site sont relatées dans le rapport.
+Voici la liste :
+- A04:2021-Insecure Design
+- A05:2021-Security Misconfiguration
+- A06:2021-Vulnerable and Outdated Components
+- A07:2021-Identification and Authentication Failures
+
+### Question 4.3
+>Comment pourrait-on remédier à cette faille ? Justifiez
+
+En ne spécifiant pas l'id d'un user directement dans l'URL.
+Cela permettrait de ne pas pouvoir uniquement modifier l'URL afin de se connecter avec un autre compte.
+
+
