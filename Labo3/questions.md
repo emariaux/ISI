@@ -72,7 +72,7 @@ Ensuite, nous pouvons voir que nous sommes connectés avec l'utilisateur admin.
 ### Question 5.3
 > Comment remédier à cette faille ? Justifiez.
 
-Que les informations du users et du role ne soit pas directement stokcé en clair dans le cookie.
+Afin de remédier à cette faille, il ne faudrait pas que les informations concernant le user soit stocké directement dans le cookie en clair. Ces informations sont le username, le role et l'id.
 
 ## Partie 3 – Salaires
 ### Manipulation 6.2
@@ -100,7 +100,7 @@ Il est important de ne pas compromettre l’utilisation de l’application, c’
 ne modifier aucune donnée (sauf celle demandée).
 
 
-```
+```SQL
 `; UPDATE Employees SET Salary = 174000 WHERE Name='TestLabo
 ```
 
@@ -113,7 +113,7 @@ A03 2021 - Injection.
 
 Il faut ajouter '; ainsi que la requête SQL permettant de mettre à jour le salaire :
 
-```
+```SQL
 `; UPDATE Employees SET Salary = 174000 WHERE Name='TestLabo
 ```
 
