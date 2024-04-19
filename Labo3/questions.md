@@ -132,7 +132,6 @@ cette application ?
 - A04 2021 - Insecure Design
 - A05 2021 - Security Misconfiguration
 
-
 ### Question 6.4
 > Comment remédier à cette faille ?
 
@@ -150,3 +149,21 @@ Dans la requête HTTP, il suffit de modifier le prix de l'oeuf à 0.50 centime p
 > Proposer une manière de corriger la vulnérabilité que vous avez découverte.
 
 En enlevant le prix de l'oeuf dans la requête HTTP, on pourra supprimer cette vulnérabilité.
+
+## Partie 5 - CMSimple
+### Question 8.1
+> Que pouvez-vous remarquer dans l’encadré rouge sur la page principale ? Qu’est-ce
+> que cela laisse penser ?
+
+as
+
+### Question 8.2
+> Quelle est/sont la/les vulnérabilité(s) du top10 de l’OWASP (2021) présente(s) dans
+> cette application ?
+
+s
+
+### Question 8.3 
+> Proposez 2 idées complémentaires ou alternatives pour corriger cette/ces vulnérabilité(s).
+
+ad
