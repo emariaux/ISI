@@ -243,7 +243,7 @@ Pour envoyer un email ouvrant une pop-up lors de l'ouverture du message, on pour
     </script>
 </head>
 <body>
-    <p>Ceci est un exemple de message électronique.</p>
+
 </body>
 </html>
 ```
