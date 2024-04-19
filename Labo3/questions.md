@@ -155,31 +155,44 @@ En enlevant le prix de l'oeuf dans la requête HTTP, on pourra supprimer cette v
 > Que pouvez-vous remarquer dans l’encadré rouge sur la page principale ? Qu’est-ce
 > que cela laisse penser ?
 
-L'encadré rouge nous indique qu'il faut modifier le mot de passe de l'utilisateur admin le plus rapidement possible, car ce dernier est toujours celui par défaut. 
+L'encadré rouge contient un avertissement demandant aux utilisateurs de changer immédiatement le mot de passe de connexion par défaut.
 
-Cela laisse penser que le site a été mis à disposition sur internet sans avoir été configuré.
+Cela laisse penser que le site a été mis à disposition sur internet avec le mot de passe de connexion par défaut, ce qui peut présenter un risque de sécurité.
+
+### Manipulation 8.2
+> Trouvez la page de login et entrer dans la zone d’administration afin de modifier le
+> mot de passe, comme l’encadré rouge vous le demande.
+
+Pour se connecter à la zone d'administration, il suffit d'entrer les crendetials par défaut du CMSimple.
+Ensuite il sera possible de modifier le mot de passe.
 
 ### Question 8.2
 > Quelle est/sont la/les vulnérabilité(s) du top10 de l’OWASP (2021) présente(s) dans
 > cette application ?
 
-To do.
+- A05 2021 - Security Misconfiguration
+- A07 2021 – Identification and Authentication Failures
 
 ### Question 8.3 
 > Proposez 2 idées complémentaires ou alternatives pour corriger cette/ces vulnérabilité(s).
 
-Prendre le temps de terminer la configuration du site afin que personne puisse se connecter avec le mot de passe par défaut.
+Obliger la modification du mot de passe lors de la première connexion.
+Définir une complexité de mot de passe.
 
 ## Partie 6 - Path traversal
 ### Question 9.1
 > Dans quel(s) dossier(s) sont stockés les drapeaux sur le serveur ?
 
-To do.
+Les drapeaux sont stockés dans un dossier à la source du serveur se nommant `/flags`, puis dans un sous-dossier correspondant au continent auquel le pays appartient, par exemple pour l'Albanie :
+
+```
+https://isi-labs.iict.ch/gr30/part6/flags/europa/
+```
 
 ### Question 9.2
 > Que peut-on constater quand on change de continent ?
 
-To do.
+Lorsqu'on change de continent, on constate que le lien change et qu'on envoie le continent souhaité en paramètre à une page nommé index.php.
 
 ### Question 9.3
 > Quelle est/sont la/les vulnérabilité(s) du top10 de l’OWASP (2017) présente(s) dans
