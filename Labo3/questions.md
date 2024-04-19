@@ -189,6 +189,19 @@ Les drapeaux sont stockés dans un dossier à la source du serveur se nommant `/
 https://isi-labs.iict.ch/gr30/part6/flags/europa/
 ```
 
+### Manipulation 9.2
+> Accéder à la page secrète
+
+Pour accéder à la page secret, on peut rajouter à la place du nom d'un continent ../, cela va nous afficher la hiérarchie des dossiers sur le site web, ensuite si on rajoute `../secret`, on pourra accéder à la page secrète.
+
+```
+https://isi-labs.iict.ch/gr30/part6/index.php?continent=../secret
+```
+
+Ce type d'attaque se nomme le Path traversal.
+
+Source : https://wiki.owasp.org/index.php/Path_Traversal
+
 ### Question 9.2
 > Que peut-on constater quand on change de continent ?
 
@@ -198,15 +211,44 @@ Lorsqu'on change de continent, on constate que le lien change et qu'on envoie le
 > Quelle est/sont la/les vulnérabilité(s) du top10 de l’OWASP (2017) présente(s) dans
 > cette application ?
 
-To do.
-
+- A01 2021 – Broken Access Control
+- A08 2021 – Software and Data Integrity Failures
+  
 ### Question 9.4
 > Qu’est-ce qui pourrait être fait pour corriger l’application et restreindre l’accès à la
 > page secrète ?
 
-To do.
+Il faudrait ajouter un contrôle du paramètre entrée pour le continent, ce qui permettrait d'interdire l'accès à d'autres données autres que les drapeaux des pays.
 
 ## Partie 7 – XSS dans l’application de messagerie
+### Manipulation 10.2
+> Envoyer un message à l’utilisateur « test2 » avec l’objectif suivant :
+> Lorsque l’utilisateur « test2 » ouvrira son message reçu, une fenêtre pop-up devra
+> s’afficher. Pour l’exemple, afficher le texte « Your account has been hacked ! »
+> Se connecter au compte test2 pour constater le résultat.
+
+Pour envoyer un email ouvrant une pop-up lors de l'ouverture du message, on pourra créer une page html qui contiendra le pop-up qui sera lancé directement dès que l'utilisateur ouvrira le message.
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Message</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            alert("Your account has been hacked !");
+        };
+    </script>
+</head>
+<body>
+    <p>Ceci est un exemple de message électronique.</p>
+</body>
+</html>
+```
+
+
 ### Question 10.1
 > Donnez 2 actions malveillantes qu’un attaquant pourrait commettre en exploitant
 > cette vulnérabilité.
