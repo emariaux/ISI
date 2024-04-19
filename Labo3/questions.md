@@ -227,44 +227,40 @@ Il faudrait ajouter un contrôle du paramètre entrée pour le continent, ce qui
 > s’afficher. Pour l’exemple, afficher le texte « Your account has been hacked ! »
 > Se connecter au compte test2 pour constater le résultat.
 
-Pour envoyer un email ouvrant une pop-up lors de l'ouverture du message, on pourra créer une page html qui contiendra le pop-up qui sera lancé directement dès que l'utilisateur ouvrira le message.
+On peut injecter un script en JavaScript dans le body de l'email qui va lancer une pop-up dès que l'utilisateur ouvrira le message.
 
 ```
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Popup Message</title>
-    <script type="text/javascript">
-        window.onload = function() {
-            alert("Your account has been hacked !");
-        };
-    </script>
-</head>
-<body>
-
-</body>
-</html>
+<script type="text/javascript">
+  window.alert("Your account has been hacked !");
+</script>
 ```
 
 ![](./img/Manip_10.2.png)
+
+### Manipulation 10.3
+> Envoyer un message à l’utilisateur « test2 » avec l’objectif suivant :
+> Lorsque l’utilisateur « test2 » consultera sa messagerie, une fenêtre pop-up devra
+> s’afficher. Pour l’exemple, afficher le texte « Your account has been hacked ! »
+> Se connecter au compte test2 (test2/pass@test2) pour constater le résultat
+
+Identique que pour la manipulation ci-dessus, sauf que la ligne sera insérée dans le sujet de l'email.
 
 ### Question 10.1
 > Donnez 2 actions malveillantes qu’un attaquant pourrait commettre en exploitant
 > cette vulnérabilité.
 
-To do.
+- Lancement du téléchargement d'un outil malveillant
+- Phishing
 
 ### Question 10.2
 > Comment s’appelle cette vulnérabilité ?
 
-To do.
+Cette vulnérabilité s'appelle Cross-site scripting, car l'attaquant injecte du code exécutable dans une application fiable.
 
 ### Question 10.3
 > Comment remédier à cette vulnérabilité ? Proposez 1 solution.
 
-To do.
+Interdire l'injection de code javascript dans les emails, comme cela est déjà le cas actuellement.
 
 ### Question 10.4
 > Expliquez la méthode d’exploitation utilisée pour réaliser cette attaque. Fournissez un
