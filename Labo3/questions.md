@@ -155,15 +155,63 @@ En enlevant le prix de l'oeuf dans la requête HTTP, on pourra supprimer cette v
 > Que pouvez-vous remarquer dans l’encadré rouge sur la page principale ? Qu’est-ce
 > que cela laisse penser ?
 
-as
+L'encadré rouge nous indique qu'il faut modifier le mot de passe de l'utilisateur admin le plus rapidement possible, car ce dernier est toujours celui par défaut. 
+
+Cela laisse penser que le site a été mis à disposition sur internet sans avoir été configuré.
 
 ### Question 8.2
 > Quelle est/sont la/les vulnérabilité(s) du top10 de l’OWASP (2021) présente(s) dans
 > cette application ?
 
-s
+To do.
 
 ### Question 8.3 
 > Proposez 2 idées complémentaires ou alternatives pour corriger cette/ces vulnérabilité(s).
 
-ad
+Prendre le temps de terminer la configuration du site afin que personne puisse se connecter avec le mot de passe par défaut.
+
+## Partie 6 - Path traversal
+### Question 9.1
+> Dans quel(s) dossier(s) sont stockés les drapeaux sur le serveur ?
+
+To do.
+
+### Question 9.2
+> Que peut-on constater quand on change de continent ?
+
+To do.
+
+### Question 9.3
+> Quelle est/sont la/les vulnérabilité(s) du top10 de l’OWASP (2017) présente(s) dans
+> cette application ?
+
+To do.
+
+### Question 9.4
+> Qu’est-ce qui pourrait être fait pour corriger l’application et restreindre l’accès à la
+> page secrète ?
+
+To do.
+
+## Partie 7 – XSS dans l’application de messagerie
+### Question 10.1
+> Donnez 2 actions malveillantes qu’un attaquant pourrait commettre en exploitant
+> cette vulnérabilité.
+
+To do.
+
+### Question 10.2
+> Comment s’appelle cette vulnérabilité ?
+
+To do.
+
+### Question 10.3
+> Comment remédier à cette vulnérabilité ? Proposez 1 solution.
+
+To do.
+
+### Question 10.4
+> Expliquez la méthode d’exploitation utilisée pour réaliser cette attaque. Fournissez un
+> exemple complet d’une entrée utilisateur permettant cette exploitation.
+
+To do.
