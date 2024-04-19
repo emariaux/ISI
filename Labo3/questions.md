@@ -42,7 +42,7 @@ Voici la liste :
 - A07 2021 - Identification and Authentication Failures
 
 ### Question 4.3
->Comment pourrait-on remédier à cette faille ? Justifiez
+> Comment pourrait-on remédier à cette faille ? Justifiez
 
 En ne spécifiant pas l'id d'un user directement dans l'URL.
 Cela permettrait de ne pas pouvoir uniquement modifier l'URL afin de se connecter avec un autre compte.
@@ -55,10 +55,10 @@ Cela permettrait de ne pas pouvoir uniquement modifier l'URL afin de se connecte
 En modifiant le cookie de la session de l'utilisateur test dans la requête HTTP, il sera possible d'être connecté en tant qu'admin.
 
 Les valeurs suivantes ont été remplacées par l'utilisateur admin, son role et son id.
-![](./Question_5.1_manip.png)
+![](./img/Question_5.1_manip.png)
 
 Ensuite, nous pouvons voir que nous sommes connectés avec l'utilisateur admin.
-![](./Question_5.1_admin.png)
+![](./img/Question_5.1_admin.png)
 
 ### Question 5.2
 > Quelle est/sont la/les vulnérabilité(s) du top10 de l’OWASP (2021) présente(s) ici (et
@@ -82,7 +82,7 @@ Que les informations du users et du role ne soit pas directement stokcé en clai
 
 Il suffit de mettre dans le champs Username : ' OR '1'='1, ce qui va nous donner que la condition sera toujours vrai donc tous les salaires seront affichés.
 
-![](./Question_6.2_manip.png)
+![](./img/Question_6.2_manip.png)
 
 ### Question 6.1
 > Identifier la vulnérabilité exploitée (le top10 peut être utile).
@@ -121,7 +121,7 @@ Grâce à cela, on pourra envoyer une requête SQL supplémentaire au serveur.
 
 Ensuite, si on affiche le salaire de l'utilisateur TestLabo, on pourra voir qu'il a effectivement été doublé.
 
-![](./Question_6.2_result.png)
+![](./img/Question_6.2_result.png)
 
 ### Question 6.3
 > Quelle est/sont la/les vulnérabilité(s) du top10 de l’OWASP (2021) présente(s) dans
@@ -144,7 +144,7 @@ Pour la partie écriture, nous pouvons limiter les droits de l'application sur l
 
 Dans la requête HTTP, il suffit de modifier le prix de l'oeuf à 0.50 centime par exemple afin qu'on puisse en acheter 12 avec 10 CHF.
 
-![](./Manip_7.2.png)
+![](./img/Manip_7.2.png)
 
 ### Question 7.2
 > Proposer une manière de corriger la vulnérabilité que vous avez découverte.
