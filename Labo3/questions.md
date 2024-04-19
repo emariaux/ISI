@@ -248,6 +248,7 @@ Pour envoyer un email ouvrant une pop-up lors de l'ouverture du message, on pour
 </html>
 ```
 
+![](./img/Manip_10.2.png)
 
 ### Question 10.1
 > Donnez 2 actions malveillantes qu’un attaquant pourrait commettre en exploitant
