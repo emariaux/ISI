@@ -262,7 +262,7 @@ Cette vulnérabilité s'appelle Cross-site scripting, car l'attaquant injecte du
 ### Question 10.3
 > Comment remédier à cette vulnérabilité ? Proposez 1 solution.
 
-Interdire l'injection de code javascript dans les emails, comme cela est déjà le cas actuellement.
+Interdire l'injection de code javascript dans les emails.
 
 ### Manipulation 10.4 
 > Lors de la lecture d’un message, en bas de page, il y a un lien « IICT » qui redirige
