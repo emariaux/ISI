@@ -26,7 +26,7 @@ La technique d'exploitation utilisée est une faille dans l'application donnant 
 #### c)
 > Détailler la méthode utilisée pour se connecter en tant que « admin ».
 
-Il suffit simplement de modifier l'url en mettant l'id 1 qui correspond à l'utilisateur admin à la place de l'id 2 qui correspond à l'utilisateur test.
+Il faut modifier l'URL en mettant l'id 1 qui correspond à l'utilisateur admin à la place de l'id 2 qui correspond à l'utilisateur test.
 
 https://isi-labs.iict.ch/gr30/part1/member.php?id=1
 
@@ -44,8 +44,8 @@ Voici la liste :
 ### Question 4.3
 > Comment pourrait-on remédier à cette faille ? Justifiez
 
-En ne spécifiant pas l'id d'un user directement dans l'URL.
-Cela permettrait de ne pas pouvoir uniquement modifier l'URL afin de se connecter avec un autre compte.
+En ne spécifiant pas l'id d'un utilisateur directement dans l'URL. 
+Cela permettrait de ne pas modifier l'URL afin de se connecter avec un autre compte.
 
 ## Partie 2 - Application mail 2
 ### Question 5.1
