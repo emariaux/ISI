@@ -54,12 +54,12 @@ Cela permettrait de ne pas modifier l'URL afin de se connecter avec un autre com
 > Comment êtes-vous parvenu à vous connecter en tant qu’« admin » ?
 > Montrez avec une capture d’écran que vous y êtes parvenu.
 
-En modifiant le cookie de la session de l'utilisateur test dans la requête HTTP, il sera possible d'être connecté en tant qu'admin.
+En modifiant le cookie de la session de l'utilisateur test dans la requête HTTP, il sera possible de se connecter en tant qu'admin.
 
 Les valeurs suivantes ont été remplacées par l'utilisateur admin, son role et son id.
 ![](./img/Question_5.1_manip.png)
 
-Ensuite, nous pouvons voir que nous sommes connectés avec l'utilisateur admin.
+Ensuite, nous pouvons voir que nous sommes connectés en tant qu' admin.
 ![](./img/Question_5.1_admin.png)
 
 ### Question 5.2
@@ -74,7 +74,9 @@ Ensuite, nous pouvons voir que nous sommes connectés avec l'utilisateur admin.
 ### Question 5.3
 > Comment remédier à cette faille ? Justifiez.
 
-Afin de remédier à cette faille, il ne faudrait pas que les informations concernant l'utilisateur soit stocké directement dans le cookie en clair. Ces informations sont le username, le role et l'id.
+Afin de remédier à cette faille, il ne faudrait pas que les informations concernant l'utilisateur soit stockées directement dans le cookie en clair. Ces informations sont le username, le role et l'id. 
+
+Un solution serait de générer un ID aléatoire pour le cookie.
 
 ## Partie 3 – Salaires
 ### Manipulation 6.2
@@ -82,7 +84,7 @@ Afin de remédier à cette faille, il ne faudrait pas que les informations conce
 > A nouveau, il est important de ne pas compromettre l’utilisation de l’application,
 > c’est-à-dire de ne modifier aucune donnée.
 
-Il suffit de mettre dans le champs Username : ' OR '1'='1, ce qui va nous donner que la condition sera toujours vrai donc tous les salaires seront affichés.
+Pour ce faire, on a ajouté dans le champs Username, cette entrée : ' OR '1'='1, ce qui va nous donner que la condition sera toujours vrai donc tous les salaires seront affichés.
 
 ![](./img/Question_6.2_manip.png)
 
@@ -94,7 +96,7 @@ Nous avons utilisé l'injection SQL.
 Dans le top 10 c'est A03 2021 - Injection.
 Cette techique nous a permis d'afficher tous les salaires.
 
-Il suffit de mettre dans le champs Username : ' OR '1'='1, ce qui va nous donner que la condition sera toujours vrai donc tous les salaires seront affichés.
+Pour ce faire, on a ajouté dans le champs Username, cette entrée : ' OR '1'='1, ce qui va nous donner que la condition sera toujours vrai donc tous les salaires seront affichés.
 
 ### Manipulation 6.3
 > Modifiez votre salaire (le doubler).
@@ -139,11 +141,13 @@ cette application ?
 
 Pour la partie écriture, nous pouvons limiter les droits de l'application sur la base de données.
 
+De plus, il faudrait ajouter un contrôle de la saisie utilisateur, ce qui permettrait d'éviter l'injection SQL.
+
 ## Partie 4 - Achat d’œufs
 ### Question 7.1
 > Expliquer comment vous avez procédé pour exploiter ce service.
 
-Dans la requête HTTP, il suffit de modifier le prix de l'oeuf à 0.50 centime par exemple afin qu'on puisse en acheter 12 avec 10 CHF.
+Dans la requête HTTP, il suffit de modifier le prix de l'oeuf à 0.50 centimes par exemple afin qu'on puisse en acheter 12 avec 10 CHF.
 
 ![](./img/Manip_7.2.png)
 
@@ -220,7 +224,7 @@ Lorsqu'on change de continent, on constate que le lien change et qu'on envoie le
 > Qu’est-ce qui pourrait être fait pour corriger l’application et restreindre l’accès à la
 > page secrète ?
 
-Il faudrait ajouter un contrôle du paramètre entrée pour le continent, ce qui permettrait d'interdire l'accès à d'autres données autres que les drapeaux des pays.
+Il faudrait ajouter un contrôle du paramètre entrée pour le continent, ce qui permettrait d'interdire l'accès à d'autres données autres que les drapeaux de plusieurs pays.
 
 ## Partie 7 – XSS dans l’application de messagerie
 ### Manipulation 10.2
@@ -312,3 +316,4 @@ Pour ce faire, le code ci-dessous a été créé, il va récupérer le lien href
 </script>
 ```
 
+Ensuite, il a été ajouté dans le body de l'email et sera exécuté lorsque le destinataire ouvrira l'email.
