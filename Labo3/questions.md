@@ -72,7 +72,7 @@ Ensuite, nous pouvons voir que nous sommes connectés avec l'utilisateur admin.
 ### Question 5.3
 > Comment remédier à cette faille ? Justifiez.
 
-Afin de remédier à cette faille, il ne faudrait pas que les informations concernant le user soit stocké directement dans le cookie en clair. Ces informations sont le username, le role et l'id.
+Afin de remédier à cette faille, il ne faudrait pas que les informations concernant l'utilisateur soit stocké directement dans le cookie en clair. Ces informations sont le username, le role et l'id.
 
 ## Partie 3 – Salaires
 ### Manipulation 6.2
