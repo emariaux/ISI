@@ -30,6 +30,8 @@ Il faut modifier l'URL en mettant l'id 1 qui correspond à l'utilisateur admin �
 
 https://isi-labs.iict.ch/gr30/part1/member.php?id=1
 
+![](./img/Question_4.1c.png)
+
 ### Question 4.2
 > Quelle est/sont la/les vulnérabilité(s) du top10 de l’OWASP (2021) présente(s) ici (et
 qui permet(tent) de se connecter en tant qu’admin) ?
