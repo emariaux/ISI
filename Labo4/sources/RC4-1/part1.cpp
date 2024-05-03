@@ -25,35 +25,43 @@ int main(int argc, char** argv) {
     char* file2Plain    = "part1_02.bmp";
 
     // Lecture des tailles des images
-    long sizeFile1 = <TODO>;
-    long sizeFile2 = <TODO>;
+    long sizeFile1 = readImageSize(file1Plain);
+    long sizeFile2 = readImageSize(file1Rc4);
     
     // Vérification de la compatibilité des tailles
-    <TODO>;
+    if (sizeFile1 != sizeFile2) {
+        cerr << "Error: Image sizes are not compatible." << endl;
+        return 1;
+    }
     
     // Lecture des images /!\ mémoire allouée
     char* image1Plain = readImage(file1Plain, sizeFile1);
-    char* image1Rc4 = <TODO>;
-    char* image2Rc4 = <TODO>;
+    char* image1Rc4 = readImage(file1Rc4, sizeFile1);
+    char* image2Rc4 = readImage(file2Rc4, sizeFile1);
     
     // Taille du contenu de l'image
-    long contentSize = <TODO>;
+    long contentSize = sizeFile1 - HEADERS_SIZE;
     
     // Création des en-têtes
     char headers[HEADERS_SIZE];
     for (long i = 0; i < HEADERS_SIZE; ++i) {
-        <TODO>;
+        headers[i] = image1Plain[i];
     }
 
     // Création du contenu en effectuant un XOR avec le keystream
-    <TODO>;
+    char* contentResult = new char[contentSize];    
+    for (long i = 0; i < contentSize; ++i) {
+        contentResult[i] = image1Rc4[i] ^ image2Rc4[i];
+    }
     
     // Création de l'image résultat
-    storeImage(<TODO>);
+    storeImage(file2Plain, headers, contentResult, HEADERS_SIZE, sizeFile1);
 
     // Libération de l'espace mémoire alloué par readImage
     delete[] image1Plain;
-    // ...
+    delete[] image1Rc4;
+    delete[] image1Rc4;
+    delete[] contentResult;
 
     return 0;
 }
