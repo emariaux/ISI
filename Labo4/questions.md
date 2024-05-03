@@ -47,3 +47,18 @@ for (dwCount = 0; dwCount < dwBufLen; dwCount++) {
   lpBuf[dwCount] ^= s[(s[a] + s[c]) % 256];
 }
 ```
+
+### Question 2.6
+> En possédant à la fois un document clair (soit P) et son équivalent chiffré (soit C),
+> expliquez comment il est possible de retrouver le keystream (KS) utilisé pour le chiffrement.
+
+En effectuant la différence entre le document clair et son équivalent chiffré, cette dernière correspond à un nombre qu'on a ajouté ou soustrait à notre texte en clair pour le chiffrer.
+
+Ce nombre constitue le keystream.
+
+### Question 2.7
+> Si deux fichiers de même taille sont chiffrés avec la même clé, que pouvons-nous dire
+> des deux keystream utilisés pour chiffrer ces deux documents ?
+
+Etant donné que les keystreams ont été générés depuis la clé, ils sont identiques.
+
