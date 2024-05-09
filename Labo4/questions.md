@@ -72,7 +72,26 @@ Etant donné que les deux images ont été chiffrées avec la même clé RC4, ce
 
 En effectuant l'opération XOR entre les deux images cryptées, il se possible de récupérer l'image en clair.
 
-Ci-dessous l'image résultant de cette opération :
-[]!(./img/part1_02.bmp)
+Ci-dessous, l'image résultant de cette opération :
+![](./sources/RC4-1/part1_02.bmp)
 
+### Question 2.9
+> Nous avons utilisé le keystream pour déchiffrer la seconde image. Serait-il possible
+> d’également retrouver la clé utilisée ? Si oui, décrire comment.
 
+Même en ayant le keystream utilisé, il sera compliqué voire impossible de récupérer la clé, sauf si cette dernière est de mauvaise qualité.
+
+## RC4 / Deux images chiffrées avec la même clé
+### Question 3.1
+> On peut noter que le keystream utilisé pour le chiffrement des deux images est identique. Avec cette information, que peut-on obtenir comme > > information sur les images en clair ?
+
+Les images ne seront pas identiques, cependant elles auront des similarités structurelles.
+
+### Question 3.2
+> Quel est le texte caché dans ces images ? Insérez également une copie des images superposées.
+
+Le texte caché dans ces images est LABO Crypto.
+
+![](./sources/RC4-1/part2_mix.bmp)
+
+### Question 3.3
