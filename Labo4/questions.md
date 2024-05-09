@@ -83,7 +83,8 @@ Même en ayant le keystream utilisé, il sera compliqué voire impossible de ré
 
 ## RC4 / Deux images chiffrées avec la même clé
 ### Question 3.1
-> On peut noter que le keystream utilisé pour le chiffrement des deux images est identique. Avec cette information, que peut-on obtenir comme > > information sur les images en clair ?
+> On peut noter que le keystream utilisé pour le chiffrement des deux images est identique. Avec cette information, que peut-on obtenir comme 
+> information sur les images en clair ?
 
 Les images ne seront pas identiques, cependant elles auront des similarités structurelles.
 
