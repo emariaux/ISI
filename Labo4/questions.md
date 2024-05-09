@@ -119,5 +119,14 @@ Oui, de nos jours, il reste l'algorithme le plus utilisé.
 Jusqu'à présent, il n'y a pas eu de failles cryptographiques majeures découvertes dans l'algorithme AES lui-même.
 
 ### Question 4.3
+> Donnez le texte clair et la clé secrète utilisée.
+
+Le texte en clair est le suivant `j aime la crypto`.
+
+La clé secrète utilisée est la suivantes `6d6f6e206c61632065737420617a7572`
+
+### Question 4.4 
+> Donnez le temps d’exécution de la recherche exhaustive sur votre machine
+
 
 
