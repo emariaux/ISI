@@ -92,6 +92,6 @@ Les images ne seront pas identiques, cependant elles auront des similarités str
 
 Le texte caché dans ces images est LABO Crypto.
 
-![](./sources/RC4-1/part2_mix.bmp)
+![](./sources/RC4-2/part2_mix.bmp)
 
 ### Question 3.3
