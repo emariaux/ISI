@@ -62,3 +62,17 @@ Ce nombre constitue le keystream.
 
 Etant donné que les keystreams ont été générés depuis la clé, ils sont identiques.
 
+### Question 2.8
+> Quel problème de cette implémentation nous a permis de décrypter cette seconde
+> image ? Donnez la formule mathématique qui vous a permis de déchiffrer la 2ème
+> image dans la manipulation 2.1.
+> Insérez également une copie de l’image montrant le résultat.
+
+Etant donné que les deux images ont été chiffrées avec la même clé RC4, cela signifie que le keystream généré par RC4 pour chiffrer la première image est le même que celui utilisé pour la deuxième.
+
+En effectuant l'opération XOR entre les deux images cryptées, il se possible de récupérer l'image en clair.
+
+Ci-dessous l'image résultant de cette opération :
+[]!(./img/part1_02.bmp)
+
+
