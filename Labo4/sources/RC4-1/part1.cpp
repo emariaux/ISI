@@ -19,12 +19,10 @@ int main(int argc, char** argv) {
     /* Compléter les parties marquées <TODO>. Il peut manquer une ou plusieurs instructions à chaque fois */
 
     // Noms des fichiers
-    char* file1Plain    = "/Users/dariovasq/CLionProjects/ISI/labo4/part1_01.bmp";
-    char* file1Rc4      = "/Users/dariovasq/CLionProjects/ISI/labo4/part1_01_rc4"
-								  ".bmp";
-    char* file2Rc4      = "/Users/dariovasq/CLionProjects/ISI/labo4/part1_02_rc4"
-								  ".bmp";
-    char* file2Plain    = "/Users/dariovasq/CLionProjects/ISI/labo4/part1_02.bmp";
+    char* file1Plain    = "part1_01.bmp";
+    char* file1Rc4      = "part1_01_rc4.bmp";
+    char* file2Rc4      = "part1_02_rc4.bmp";
+    char* file2Plain    = "part1_02.bmp";
 
     // Lecture des tailles des images
     long sizeFile1 = readImageSize(file1Plain);
