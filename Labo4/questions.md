@@ -96,3 +96,28 @@ Le texte caché dans ces images est LABO Crypto.
 ![](./sources/RC4-2/part2_mix.bmp)
 
 ### Question 3.3
+> Cette technique fonctionne-elle efficacement avec n’importe quelles images ou documents ? Pourquoi ?
+> Donnez la formule mathématique qui explique ce résultat.
+
+Oui, car le chiffrement est réalisé en effectuant une opération bit à bit entre les données et le keystream.
+
+Cela pourrait être représenter sous cette formule mathématique : 
+IMG1_RC4 XOR IMG2_RC4 = (IMG1 XOR KS) XOR (IMG2 XOR KS) = IMG1 XOR IMG2
+
+## AES / Recherche exhaustive de clé
+### Question 4.1
+> Expliquez succinctement dans quel cadre l’algorithme AES a été conçu et donnez le nom de ses concepteurs.
+
+L'algorithme AES a été conçu dans le cadre du remplacement du DES qui était devenu obsolète en raison de sa clé courte.
+
+Il a été créé par deux cryptographes belges Vincent Rijmen et Joan Daemen.
+
+### Question 4.2
+> De nos jours, l’algorithme AES peut-il être encore considéré comme sûr en pratique ?
+
+Oui, de nos jours, il reste l'algorithme le plus utilisé.
+Jusqu'à présent, il n'y a pas eu de failles cryptographiques majeures découvertes dans l'algorithme AES lui-même.
+
+### Question 4.3
+
+
