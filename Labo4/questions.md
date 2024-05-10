@@ -128,5 +128,68 @@ La clé secrète utilisée est la suivante `6d6f6e206c61632065737420617a7572`
 ### Question 4.4 
 > Donnez le temps d’exécution de la recherche exhaustive sur votre machine
 
+Le temps d'éxécution a été de 2.07 secondes.
 
+### Question 4.5
+> À partir de cette valeur, évaluez le temps nécessaire pour une recherche exhaustive
+complète sur les 128 bits de la clé. Justifiez la réponse (explications et calculs).
+Vous pouvez donner la réponse sous forme de calcul, en secondes.
 
+Pour 24 bits il nous a fallut 2.07 secondes
+si on fait un produit en croix.
+
+2^24 bits = 2.07 s
+2^128 bits = x s
+
+x = (2.07 * 2^128) / 2^24
+x = 4.19x10^31 secondes
+
+### Question 4.6
+> Hormis le temps de calcul, quelle est la principale difficulté/limitation de cette méthode, si on voulait pouvoir déchiffrer n’importe quoi ?
+
+Cela demande un puissance de calcul énorme par ailleurs.
+Dans notre test, nous avions l'avantage de connaitre les 4 premières lettres du texte en clair. Cela nous permet de vérifier la clé. On a pas forcément un moyen de vérifier directement.
+
+## Cryptographie appliquée
+### Question 5.1
+> Dans quel format sont sauvegardées les clés privées ?
+
+Elles sont sauvegardées au format PKCS#8
+
+### Questions 5.2
+> Avec quel encodage sont sauvegardées les clés privées ?
+
+C'est au format PEM
+
+### Question 5.3
+> Au moment du déchiffrement hybride, 2 clés différentes sont utilisées. Lesquelles et
+pour déchiffrer quoi ?
+
+Oui, il y a la clé privée de Bob, afin d'unwrap le message. Ensuite, la clé simmétrique est nécessaire pour déchiffrer le message.
+
+### Question 5.4
+> Pourquoi utiliser du chiffrement hybride au lieu de n’utiliser que du chiffrement symétrique ou asymétrique ? Donnez 2 avantages.
+
+C'est plus efficace, on gagne en rapidité car on bénéfice de la rapidité du chiffremetn symétrique pour les données volumineuses.
+
+La sécurité, on bénéficie des avantages de sécurités du chiffrement asymétrique.
+
+### Question 5.5 
+> Donnez un cas où il n’est pas possible d’utiliser l’échange de clé de Diffie-Hellman.
+Pourquoi ?
+
+Si on a pas de canal sécurisé pour transmettre les données plublics. En effet au déaprt si un attaquant est au millieu il pourrait modifier les paramètres d'un éléments publics.
+
+### Question 5.6
+>Avec quelle clé est signé le certificat de Charlie ?
+c'est la clé privée de Charlie
+
+### Question 5.7
+>Avec quelle clé est signé le certificat de Alice ?
+
+C'est la clé privée de Charlie
+
+### Question 5.8
+>Quelle clé se trouve dans le certificat de Bob ?
+
+Sa clé publique.
