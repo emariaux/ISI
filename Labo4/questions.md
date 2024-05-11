@@ -168,7 +168,7 @@ pour déchiffrer quoi ?
 Oui, il y a la clé privée de Bob, afin d'unwrap le message. Ensuite, la clé symétrique est nécessaire pour déchiffrer le message.
 
 ### Question 5.4
-> Pourquoi utiliser du chiffrement hybride au lieu de n’utiliser que du chiffrement symétrique ou asymétrique ? Donnez 2 avantages.
+> Pourquoi utiliser du chiffrement hybride au lieu de n’utiliser que du chiffrement symétrique ou asymétrique ? Donnez 2 avantages.
 
 C'est plus efficace, on gagne en rapidité car on bénéfice de la rapidité du chiffrement symétrique pour les données volumineuses.
 
