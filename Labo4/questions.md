@@ -145,7 +145,7 @@ x = (2.07 * 2^128) / 2^24
 x = 4.19x10^31 secondes
 
 ### Question 4.6
-> Hormis le temps de calcul, quelle est la principale difficulté/limitation de cette méthode, si on voulait pouvoir déchiffrer n’importe quoi ?
+> Hormis le temps de calcul, quelle est la principale difficulté/limitation de cette méthode, si on voulait pouvoir déchiffrer n’importe quoi ?
 
 Cela demande un puissance de calcul énorme par ailleurs.
 Dans notre test, nous avions l'avantage de connaitre les 4 premières lettres du texte en clair. Cela nous permet de vérifier la clé. On a pas forcément un moyen de vérifier directement.
