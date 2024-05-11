@@ -165,12 +165,12 @@ C'est au format PEM
 > Au moment du déchiffrement hybride, 2 clés différentes sont utilisées. Lesquelles et
 pour déchiffrer quoi ?
 
-Oui, il y a la clé privée de Bob, afin d'unwrap le message. Ensuite, la clé simmétrique est nécessaire pour déchiffrer le message.
+Oui, il y a la clé privée de Bob, afin d'unwrap le message. Ensuite, la clé symétrique est nécessaire pour déchiffrer le message.
 
 ### Question 5.4
 > Pourquoi utiliser du chiffrement hybride au lieu de n’utiliser que du chiffrement symétrique ou asymétrique ? Donnez 2 avantages.
 
-C'est plus efficace, on gagne en rapidité car on bénéfice de la rapidité du chiffremetn symétrique pour les données volumineuses.
+C'est plus efficace, on gagne en rapidité car on bénéfice de la rapidité du chiffrement symétrique pour les données volumineuses.
 
 La sécurité, on bénéficie des avantages de sécurités du chiffrement asymétrique.
 
@@ -178,18 +178,19 @@ La sécurité, on bénéficie des avantages de sécurités du chiffrement asymé
 > Donnez un cas où il n’est pas possible d’utiliser l’échange de clé de Diffie-Hellman.
 Pourquoi ?
 
-Si on a pas de canal sécurisé pour transmettre les données plublics. En effet au déaprt si un attaquant est au millieu il pourrait modifier les paramètres d'un éléments publics.
+Si on a pas de canal sécurisé pour transmettre les données publics. En effet au départ si un attaquant est au milieu, il pourrait modifier les paramètres d'un élément public.
 
 ### Question 5.6
->Avec quelle clé est signé le certificat de Charlie ?
-c'est la clé privée de Charlie
+> Avec quelle clé est signée le certificat de Charlie ?
+
+C'est la clé privée de Charlie.
 
 ### Question 5.7
->Avec quelle clé est signé le certificat de Alice ?
+> Avec quelle clé est signée le certificat de Alice ?
 
-C'est la clé privée de Charlie
+C'est la clé privée de Charlie.
 
 ### Question 5.8
->Quelle clé se trouve dans le certificat de Bob ?
+> Quelle clé se trouve dans le certificat de Bob ?
 
 Sa clé publique.
