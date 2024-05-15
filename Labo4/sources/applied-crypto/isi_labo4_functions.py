@@ -197,10 +197,9 @@ def verify_cert(ca, cert, name):
 
 # Vérifie la validité d'un certificat racine
 # 'cert' est le certificat racine à vérifier
-# 'COMMON_NAME' est le nom attendu dans le certificat
 def verify_root_cert(cert) -> bool:
     try:
-        cert.public_key.verify(
+        cert.public_key().verify(
             cert.signature,
             cert.tbs_certificate_bytes,
             padding.PKCS1v15(),
