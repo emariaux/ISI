@@ -4,3 +4,4 @@
 ### Question 3.1
 > Quelle est la valeur de la variable x affichée à la fin du programme principal ?
 
+x = 2
