@@ -9,87 +9,195 @@ x = 2
 ### Question 3.2
 > La première incrémentation de x
 
+addl   $0x1,-0xc(%ebp)
+
+0x56556210
+
 ### Question 3.3
 > La seconde incrémentation de x
+
+addl   $0x1,-0xc(%ebp)
+
+0x56556214
 
 ### Question 3.4
 > L'appel à l'affichage de la variable x
 
+    sub    $0x8,%esp
+	push   $0x56557008
+	push   $0x56559040
+	call   0xf7d2bc60                 ; <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)>
+	add    $0x10,%esp
+	sub    $0x8,%esp
+	push   -0xc(%ebp)
+	push   %eax
+	call   0xf7d2c140                 ; <std::basic_ostream<char, std::char_traits<char> >::operator<<(int)>
+	add    $0x10,%esp
+	sub    $0x8,%esp
+	push   $0xf7d2b530
+	push   %eax
+	call   0xf7d2a6d0                 ; <std::basic_ostream<char, std::char_traits<char> >::operator<<(std::basic_ostream<char, std::char_traits<char> >& (*)(std::basic_ostream<char, std::char_traits<char> >&))>
+	add    $0x10,%esp
+
+0x56556218 à 0x5655624a
 
 ### Question 3.5
 > Calculer l'offset entre l'adresse de retour de la fonction function() et le code de la
 première incrémentation de x. Détailler le calcul.
 
+En connaissant l'adresse de retour : 0x5655620d
+
+Et l'addresse du addls           : 0x56556210
+
+nous pouvons soustraire 0x56556210 - 0x5655620d = 3
+
+Nous avons un offset de 3.
+
 ### Question 3.6
 > Calculer l'offset entre l'adresse de retour de la fonction function() et le code de la
 seconde incrémentation de x. Détailler le calcul.
 
+En connaissant l'adresse de retour : 0x5655620d
+
+Et l'addresse du 2ème addls        : 0x56556214
+
+nous pouvons soustraire 0x56556210 - 0x5655620d = 6
+
+Nous avons un offset de 6.
+
+
 ### Question 3.7
-> Calculer l'oset entre l'adresse de retour de la fonction function() et le code de l'appel
+> Calculer l'offset entre l'adresse de retour de la fonction function() et le code de l'appel
 à l'affichage de la variable x. Détailler le calcul.
 
+En connaissant l'adresse de retour : 0x5655620d
+
+Et l'addresse du 2ème addls        : 0x56556218
+
+nous pouvons soustraire 0x56556210 - 0x56556218 = 9
+
+Nous avons un offset de 9.
 
 ### Question 3.8
 > Fournir une capture du code désassemblé de la fonction function().
 
+![](./img/3-8.png)
 
 ### Question 3.9
-> Donner la valeur des registres dénissant la pile, à savoir ESP et EBP (ou RSP et
+> Donner la valeur des registres déffinissant la pile, à savoir ESP et EBP (ou RSP et
 RBP).
 
+![](./img/3-9.png)
+
 ### Question 3.10
-> À l'aide du code C++ et assembleur, donner l'adresse de la variable locale  classe ,
+> À l'aide du code C++ et assembleur, donner l'adresse de la variable locale "classe",
 sachant que cette variable est un pointeur sur un tableau d'entiers.
+
+0xffffd6fc
 
 ### Question 3.11
-> À partir de ce pointeur sur le tableau  classe , donner les adresses de classe[0],
+> À partir de ce pointeur sur le tableau  "classe", donner les adresses de classe[0],
 classe[1], classe[2], et classe[3].
 
+- classe[0] 0xffffd6fc
+- classe[1] 0xffffd700
+- classe[2] 0xffffd704
+- classe[3] 0xffffd708
+
 ### Question 3.12
-> À l'aide du code C++ et assembleur, donner l'adresse de la variable locale  grade ,
+> À l'aide du code C++ et assembleur, donner l'adresse de la variable locale "grade",
 sachant que cette variable est un pointeur sur un tableau d'entiers.
+
+On sait que l'on fait EBP -0x10 pour grade[0] donc c'est 0xffffd70c
 
 ### Question 3.13
 > À partir de ce pointeur sur le tableau grade, donner les adresses de grade[0],grade[1],
 grade[2], et grade[3].
 
+- grade[0] 0xffffd70c
+- grade[1] 0xffffd710 (EBP - 0xc)
+- grade[2] 0xffffd714 (EBP - 0x8)
+- grade[3] 0xffffd718 
+
 ### Question 3.14
 > À partir des informations précédentes, dessiner la pile (cela inclut les variables locales
- classe  et  grade , la sauvegarde du registre EBP (ou RBP) et la sauvegarde
-du registre EIP (ou RIP)). Indiquer aussi par une èche à quelle adresse pointent
+"classe" et "grade", la sauvegarde du registre EBP (ou RBP) et la sauvegarde
+du registre EIP (ou RIP)). Indiquer aussi par une flèche à quelle adresse pointent
 EBP (RBP) et ESP (RSP) respectivement. Représenter la pile juste avant de sortir
 de la fonction. Votre représentation de la pile doit comprendre, pour chaque élément
 mentionné ci-avant, son adresse, sa description (ex : nom de la variable) et sa valeur
+
+1. 0x00000000ffffd76c 8c 37 e6 f7 <-- ESP (classe[0] = 1)
+2. 0x00000000ffffd700 d8 cf ff f7   (classe[1] = 2)
+3. 0x00000000ffffd704 28 00 00 00   (classe[2] = 3)
+4. 0x00000000ffffd708 00 00 00 00   (classe[3] = indeterminé)
+5. 0x00000000ffffd70c 01 00 00 00   (grade[0] = 3)
+6. 0x00000000ffffd710 c8 53 a2 f7   (grade[1]= 2)
+7. 0x00000000ffffd714 b8 37 e6 f7   (grade[2] = 1)
+8. 0x00000000ffffd718 bc 37 e6 f7   (grade[3] =  indeterminé)
+9. 0x00000000ffffd71c 48 d7 ff ff <-- EBP
+
 
 ### Question 3.15
 > Enlever les commentaires devant l'instruction classe[7] += 10 ; puis expliquer ce
 qu'il se passe et pourquoi.
 
+Il va écrire à classe 7. Mais classe 7 n'existe pas donc il fait l'adresse de classe + 7. Donc il arrive sur grade[3] et fait +10.
 
 ### Question 3.16
-> Modifier grade[1] à partir du tableau  classe . Pour cela, calculer les indices pour
-tomber juste ! Indiquer la ligne à ajouter juste avant l'instruction modiée précédemment et prouver, à l'aide d'une capture d'écran de la représentation de la mémoire, que
+> Modifier grade[1] à partir du tableau "classe". Pour cela, calculer les indices pour
+tomber juste ! Indiquer la ligne à ajouter juste avant l'instruction modifiée précédemment et prouver, à l'aide d'une capture d'écran de la représentation de la mémoire, que
 la mémoire a bien été changée comme souhaité. Commenter et expliquer le phénomène.
 
+```c++
+classe[5] = 5;
+```
+Il va écrire à classe 5. Mais classe 5 n'existe pas donc il fait l'adresse de classe + 5. Donc il arrive sur grade[1] et met la variable à 5.
+
 ### Question 3.17
-> Modier cette instruction pour eectuer un stack overow et pour que le programme
-ache x=1. Justier en indiquant la valeur de saut d'adresse, la méthode employée et
+> Modifier cette instruction pour effectuer un stack overflow et pour que le programme
+affiche x=1. Justifier en indiquant la valeur de saut d'adresse, la méthode employée et
 l'instruction C++ qui remplace le code précédent
 
+```c++
+classe[16] = -1;
+```
+
+0xffffd6fc <-- adresse de classe[0]
+
+0xffffd73c <-- adresse de x
+
+Nous devons nous déplacer de 16 adresses en avant.
+
+La méthode utilisée et d'aller écrire à une adresse qui n'est plus dans le tableau et qui provoque un overflow. 
 
 ### Question 3.18
 > Quelle est la valeur d'EIP/RIP stockée en mémoire avant la dernière instruction de
 la fonction ? Quelle est sa valeur après la dernière instruction (juste avant de sortir de
 la fonction) ? Illustrer la réponse avec deux captures d'écran représentant la mémoire
-avant et après la modication de la valeur EIP.
+avant et après la modification de la valeur EIP.
+
+EIP avant éxecution : 0x565561f0
+![](./img/3-18_avant.png)
+EIP après éxecution : 0x565561f7
+![](./img/3-18_apres.png)
+
+
 
 ### Question 3.19
-> Comment modier le stack overow pour acher x=0 ? Justifier en indiquant la
+> Comment modifier le stack overflow pour afficher x=0 ? Justifier en indiquant la
 valeur de saut d'adresse, la méthode employée et l'instruction C++.
 
-### Question 3.20
-> Enlever les commentaires devant l'instruction classe[7] += 10 ; puis expliquer ce
-qu'il se passe et pourquoi.
+```c++
+classe[16] = -2;
+```
+
+0xffffd6fc <-- adresse de classe[0]
+
+0xffffd73c <-- adresse de x
+
+Nous faisons classe[16] ce qui nous fait arriver directement sur x et nous écrivons à cette adresse.
+
 
 ## Partie  2 : feuille-caillou-ciseaux
 
