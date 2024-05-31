@@ -205,41 +205,86 @@ Nous faisons classe[16] ce qui nous fait arriver directement sur x et nous écri
 > Indiquer comment utiliser la faille fonctionnelle permettant de gagner à tous les coups.
 Illustrer la réussite par une capture d'écran du programme.
 
+Si on prend l'ID 0 on gagne à chaque fois.
+
+![](./img/4-1.png)
 
 ### Question 4.2
-> Expliquer, au niveau du code, comment cette attaque fonctionne. Décrire les modi-
-cations à apporter au programme pour xer cette faille.
+> Expliquer, au niveau du code, comment cette attaque fonctionne. Décrire les modifi-
+cations à apporter au programme pour fixer cette faille.
+
+à la ligne 11 nous mettons l'id afin d'indiquer le vote du joueur. Cependant le tableau vote est initialisé à 0. Donc lorsque l'on met l'id dedans il rajoute 0. Cela engendre que nous ne passons jamais dans le if à la ligne 26.
+
+à la ligne 75 nous devons mettre
+```c++
+	while ( !(( cin >> id) && id > 0 && id <= 1000))
+```
 
 ### Question 4.3
 > Représenter la pile de la fonction evalue_fcc() lorsque toutes les variables locales
 sont déclarées a
 . Cette étape est importante car elle vous permet de savoir comment
 la pile est organisée (en 32 ou 64 bits) et cela vous aidera grandement pour réaliser le
- stack overow .
+"stack overflow".
 a. Utiliser la même représentation de la pile et les mêmes éléments que demandés à la question
-3.14
+
+
+- 0xffffd6e0 <-- ESP ()(ordi[0])
+- 0xffffd6e4 (ordi[1])
+- 0xffffd6e8 (ordi[2])
+- 0xffffd6ec (vote[0])
+- 0xffffd6f0 (vote[1])
+- 0xffffd6f4 (vote[2])
+- 0xffffd6f8 (alea)
+- 0xffffd6fc (i)
+- 0xffffd700 (i)
+- 0xffffd704 (i)
+- 0xffffd708 <-- EBP
+- 0xffffd70c <-- ancien EIP donc adresse de retour
 
 
 ### Question 4.4
-> Chercher un moyen de modier la pile. Étant donné que le joueur n'a que peu d'entrées
-possibles (identiant, choix feuille-caillou-ciseaux), cela ne doit pas être compliqué.
-Quel paramètre permet de modier la pile ? Quelle valeur faut il lui donner pour
+> Chercher un moyen de modifier la pile. Étant donné que le joueur n'a que peu d'entrées
+possibles (identifiant, choix feuille-caillou-ciseaux), cela ne doit pas être compliqué.
+Quel paramètre permet de modifier la pile ? Quelle valeur faut il lui donner pour
 atteindre la valeur sauvegardée d'EIP/RIP ?
 
+C'est au niveau du choix feuille-caillou-ciseaux que nous effectuons l'overflow.
+
+il faut choisir 8 pour arriver sur l'adresse EIP.
+
 ### Question 4.5
-> Grâce à la question précédente, il est donc possible de modier l'adresse de retour.
+> Grâce à la question précédente, il est donc possible de modifier l'adresse de retour.
 Quel paramètre contrôle l'incrément de la valeur d'EIP/RIP ?
 
+C'est l'id car on fait 
+```c++
+	vote[in]+= id;
+```
+
 ### Question 4.6
-> Donner la logique de l'attaque (par rapport au code C++). Quelles instructions devraient être sautées ?
+> Donner la logique de l'attaque (par rapport au code C++). Quelles instructions devraient être sautées ?
+
+il faudrait sauter les instructions ou on analyse le score et on rajoute un point ou non.
+
+```c++
+	if (res != 0 || vote < 0 || vote > 2)
+            score++;
+```
 
 ### Question 4.7
-> Quelle serait la valeur de l'incrément d'EIP/RIP permettant de gagner ? Justier la
+> Quelle serait la valeur de l'incrément d'EIP/RIP permettant de gagner ? Justifier la
 réponse.
 
+Nous devons modifier l'adresse de retour qui est actuellement : 0x56556681
+l'adresse de retour souhaitée : 0x5655669e
+
+donc 0x5655669e - 0x56556681 = 29
 
 ### Question 4.8
 > EL'attaque ayant été analysée, il reste à la réaliser. Fournir une capture d'écran prouvant
-"la triche" (en ayant le score de 0 à la n). Le déroulement du programme ainsi que
-le message de bienvenue au score nal doivent bien évidemment y gurer.
+"la triche" (en ayant le score de 0 à la fin). Le déroulement du programme ainsi que
+le message de bienvenue au score final doivent bien évidemment y figurer.
 
+![](./img/4-8_part1.png)
+![](./img/4-8_part2.png)
