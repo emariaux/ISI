@@ -47,7 +47,7 @@ première incrémentation de x. Détailler le calcul.
 
 En connaissant l'adresse de retour : 0x5655620d
 
-Et l'addresse du addls           : 0x56556210
+Et l'adresse du addls           : 0x56556210
 
 nous pouvons soustraire 0x56556210 - 0x5655620d = 3
 
@@ -59,7 +59,7 @@ seconde incrémentation de x. Détailler le calcul.
 
 En connaissant l'adresse de retour : 0x5655620d
 
-Et l'addresse du 2ème addls        : 0x56556214
+Et l'adresse du 2ème addls        : 0x56556214
 
 nous pouvons soustraire 0x56556210 - 0x5655620d = 6
 
@@ -72,7 +72,7 @@ Nous avons un offset de 6.
 
 En connaissant l'adresse de retour : 0x5655620d
 
-Et l'addresse du 2ème addls        : 0x56556218
+Et l'adresse du 2ème addls        : 0x56556218
 
 nous pouvons soustraire 0x56556210 - 0x56556218 = 9
 
@@ -186,11 +186,6 @@ Cependant dans le registre EIP elle est bien modifiée car nous avons excécuté
 
 ![](./img/3-18_avant_2.png)
 
-
-
-
-
-
 ### Question 3.19
 > Comment modifier le stack overflow pour afficher x=0 ? Justifier en indiquant la
 valeur de saut d'adresse, la méthode employée et l'instruction C++.
@@ -220,9 +215,9 @@ Si on prend l'ID 0 on gagne à chaque fois.
 > Expliquer, au niveau du code, comment cette attaque fonctionne. Décrire les modifi-
 cations à apporter au programme pour fixer cette faille.
 
-à la ligne 11 nous mettons l'id afin d'indiquer le vote du joueur. Cependant le tableau vote est initialisé à 0. Donc lorsque l'on met l'id dedans il rajoute 0. Cela engendre que nous ne passons jamais dans le if à la ligne 26.
+À la ligne 11 nous mettons l'id afin d'indiquer le vote du joueur. Cependant le tableau vote est initialisé à 0. Donc lorsque l'on met l'id dedans il rajoute 0. Cela engendre que nous ne passons jamais dans le if à la ligne 26.
 
-à la ligne 75 nous devons mettre
+À la ligne 75 nous devons mettre
 ```c++
 	while ( !(( cin >> id) && id > 0 && id <= 1000))
 ```
@@ -289,7 +284,7 @@ l'adresse de retour souhaitée : 0x5655669e
 donc 0x5655669e - 0x56556681 = 29
 
 ### Question 4.8
-> EL'attaque ayant été analysée, il reste à la réaliser. Fournir une capture d'écran prouvant
+> L'attaque ayant été analysée, il reste à la réaliser. Fournir une capture d'écran prouvant
 "la triche" (en ayant le score de 0 à la fin). Le déroulement du programme ainsi que
 le message de bienvenue au score final doivent bien évidemment y figurer.
 
