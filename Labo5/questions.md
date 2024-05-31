@@ -179,6 +179,8 @@ avant et après la modification de la valeur EIP.
 
 EIP avant éxecution : 0x565561f0
 ![](./img/3-18_avant.png)
+
+
 EIP après éxecution : 0x565561f7
 ![](./img/3-18_apres.png)
 
