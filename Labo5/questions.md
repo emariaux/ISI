@@ -177,12 +177,17 @@ la fonction ? Quelle est sa valeur après la dernière instruction (juste avant 
 la fonction) ? Illustrer la réponse avec deux captures d'écran représentant la mémoire
 avant et après la modification de la valeur EIP.
 
-EIP avant éxecution : 0x565561f0
-![](./img/3-18_avant.png)
+Dans la mèmoire nous ne constatons pas de différentes avec l'adresse EIP sauvegardée qui correspond à l'adresse de retour de la fonction. La valeur dans la mèmoire est "1d 65 55 56".
+
+Cependant dans le registre EIP elle est bien modifiée car nous avons excécuté une ligne ou plusieur du code assembleur.
+
+- EIP avant éxecution : 0x565561f0
+- EIP après éxecution : 0x565561f7
+
+![](./img/3-18_avant_2.png)
 
 
-EIP après éxecution : 0x565561f7
-![](./img/3-18_apres.png)
+
 
 
 
