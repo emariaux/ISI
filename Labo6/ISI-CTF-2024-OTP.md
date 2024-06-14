@@ -1,5 +1,5 @@
 
-# ISI-CTF-2024 – 64 jours après et toujours pas déchiffré...
+# ISI-CTF-2024 – OTP
 
 * **Auteurs:** 
 	* Vasques Dario
@@ -63,7 +63,8 @@ Le flag était :
 ## Mitigations possibles
 La mitigation suivante est envisageable :
 
-TODO
+- Limiter les paramètres acceptés : Configurer sur le serveur qu'il y a que un type nombre qui est accepté et uniquement un seul paramètre.
+- 
 
 
 
