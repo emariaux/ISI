@@ -50,7 +50,7 @@ GET /index.php?otp[]=123456&otp[]=1 HTTP/1.1
 Cela permet de manipuler le traitement de la variable 'otp' comme un tableau en PHP.
 Le tableau contiendrait donc deux valeurs : 123456 et 1.
 Le serveur va comparer la première valeur (1234566) avec la valeur valide.
-Cela va être faut. Cependant avec la deuxième valeur vu que le serveur est mal configuré pour contrer cette attaque, il interpète l'authentification comme valide.
+Cela va être faux. Cependant avec la deuxième valeur vu que le serveur est mal configuré pour contrer cette attaque, il interpète l'authentification comme valide.
 
 
 ## Flag
@@ -63,8 +63,8 @@ Le flag était :
 ## Mitigations possibles
 La mitigation suivante est envisageable :
 
-- Limiter les paramètres acceptés : Configurer sur le serveur qu'il y a que un type nombre qui est accepté et uniquement un seul paramètre.
-- 
-
+- Limiter les paramètres acceptés : Configurer sur le serveur qu'il y a que le type nombre qui est valide et uniquement un seul paramètre.
+- Validation des entrées côté serveur : Vérifier que l'utilisateur entre un nombre correspondant au pattern.
+- Modification de la comparaison du OTP entrée et du OTP valide : Remplacer la condition par `===` afin que le type soit aussi comparé.
 
 
