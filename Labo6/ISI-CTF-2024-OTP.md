@@ -64,7 +64,7 @@ Le flag était :
 La mitigation suivante est envisageable :
 
 - Limiter les paramètres acceptés : Configurer sur le serveur qu'il y a que le type nombre qui est valide et uniquement un seul paramètre.
-- Validation des entrées côté serveur : Vérifier que l'utilisateur entre un nombre correspondant au pattern.
+- Validation des entrées côté serveur : Vérifier que l'utilisateur entre un nombre correspondant au pattern et rien d'autre.
 - Modification de la comparaison du OTP entrée et du OTP valide : Remplacer la condition par `===` afin que le type soit aussi comparé.
 
 
