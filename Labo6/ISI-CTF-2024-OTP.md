@@ -30,7 +30,7 @@ Aucun hint utilisé
 
 1. Nous avons essayer plusieurs jetons banal du style 000000, 111111, etc...
 2. Injection SQL
-3. Brute force du mot de passes, ce qui n'était pas concluait vu le nombre élevé de possibilité.
+3. Brute force du mot de passe, ce qui n'était pas concluant vu le nombre élevé de possibilité.
 
 ## Solution finale
 
